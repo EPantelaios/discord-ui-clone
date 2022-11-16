@@ -3,7 +3,7 @@ const size = {
   desktop: '1024px',
 };
 
-const deviceNumberSizes = {
+const deviceSize = {
   tablet: 768,
   desktop: 1024,
 };
@@ -13,4 +13,4 @@ const device = {
   desktop: `(min-width: ${size.desktop})`,
 };
 
-export { device, deviceNumberSizes };
+export { device, deviceSize };

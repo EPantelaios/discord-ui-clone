@@ -1,4 +1,5 @@
 const colors = {
+  blue: '#404EED',
   blurple: '#5865F2',
   greyple: '#99AAB5',
   white: '#FFFFFF',
