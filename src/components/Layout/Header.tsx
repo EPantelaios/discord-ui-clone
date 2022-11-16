@@ -1,6 +1,5 @@
-import React from 'react';
-import NavBar from './NavBar';
 import { HeaderContainer } from './Header.style';
+import NavBar from './NavBar';
 
 function Header() {
   return (

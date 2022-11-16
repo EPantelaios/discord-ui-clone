@@ -1,24 +1,35 @@
 import styled from 'styled-components';
-import { ReactComponent as discordLogo } from '../../assets/discord_main_logo.svg';
+
 import colors from '../../config/colors';
 
-export const NavContainer = styled.nav`
+export const NavBarContainer = styled.nav`
   position: fixed;
   width: 100%;
-  max-width: 1180px;
-  height: 80px;
+  height: 5rem;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  border: 3px solid greenyellow;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+`;
+
+export const NavBarWrapper = styled.div`
+  width: 100%;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
+  align-items: center;
+  border: 3px solid red;
+  gap: 1rem;
+  color: white;
 `;
 
-export const NavLogoWrapper = styled.div`
-  /* width: 300px; */
-`;
+export const NavBarContentItems = styled.div``;
 
-export const NavLogo = styled(discordLogo)`
-  /* background-color: #5865f2; */
-  /* z-index: 1000; */
+export const NavBarLogoWrapper = styled.div`
+  display: flex;
+  margin-right: auto;
+  justify-self: flex-start;
 `;
