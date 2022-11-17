@@ -6,11 +6,11 @@ import useResizeObserver from 'use-resize-observer';
 import { deviceSize } from '../../config/device';
 import Modal from '../UI/Modal';
 import HamburgerMenu from './HamburgerMenu/HamburgerMenu';
+import HamburgerMenuModalContent from './HamburgerMenu/HamburgerMenuModalContent';
 import {
   NavBarContainer,
   NavBarWrapper,
   NavBarLogoWrapper,
-  // NavBarItem,
 } from './NavBar.style';
 import NavBarLoginButton from './NavBarContent/NavBarLoginButton';
 import NavBarLogo from './NavBarContent/NavBarLogo';
@@ -30,18 +30,13 @@ function NavBar() {
     return false;
   }, [ref, width]);
 
-  // const NavBarItems = navBarContent.map((item) => {
-  //   <NavBarItem key={index} item={item}>
-  //     {item}
-  //   </NavBarItem>;
-  // });
   console.log('isBigScreen', isBigScreen);
 
   return (
     <>
       {!isBigScreen && isMenuOpen && (
         <Modal onClose={() => setIsMenuOpen(false)}>
-          {/* <HamburgerMenuContent /> */}
+          <HamburgerMenuModalContent />
         </Modal>
       )}
       <NavBarContainer ref={ref}>
@@ -49,7 +44,6 @@ function NavBar() {
           <NavBarLogoWrapper>
             <NavBarLogo />
           </NavBarLogoWrapper>
-          {/* {isBigScreen && NavBarItems} */}
           <NavBarLoginButton>
             {/* <Link to="/login">Login</Link> */}
             Login
@@ -59,7 +53,6 @@ function NavBar() {
           )}
         </NavBarWrapper>
       </NavBarContainer>
-      {/* {NavBarItems} */}
     </>
   );
 }
