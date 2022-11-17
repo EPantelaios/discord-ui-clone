@@ -17,10 +17,11 @@ export const NavBarLoginButtonStyled = styled.button`
   font-size: 14px;
   transition: all 0.2s ease-in-out;
 
-  :hover {
+  :hover,
+  :active {
     cursor: pointer;
     color: ${colors.blurple};
     font-weight: 500;
-    box-shadow: 0 1px 4px 1px ${colors.dark};
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
   }
 `;
