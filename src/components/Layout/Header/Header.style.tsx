@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import colors from '../../config/colors';
+import colors from '../../../config/colors';
 
 //flex-grow, flex-shrink, flex-basis maybe for the fonts size?
 
