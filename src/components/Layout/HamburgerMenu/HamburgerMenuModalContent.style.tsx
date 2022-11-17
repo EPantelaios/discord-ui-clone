@@ -2,17 +2,41 @@ import styled from 'styled-components';
 
 import { ReactComponent as CloseIcon } from '../../../assets/close_icon.svg';
 import { ReactComponent as DownloadIcon } from '../../../assets/download_button_icon.svg';
-
 import colors from '../../../config/colors';
 import NavBarLogo from '../NavBarContent/NavBarLogo';
+
+type Props = {
+  isSelected: boolean;
+};
 
 export const ContainerWrapper = styled.div`
   height: 90vh;
   padding: 1.5rem 3rem 7.5rem 1.5rem;
 `;
 
+export const HeaderMenuContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
 export const HamburgerMenuLogo = styled(NavBarLogo)`
   color: ${(props) => props?.color};
+`;
+
+export const CloseButtonIcon = styled(CloseIcon)`
+  position: absolute;
+  top: 1.7rem;
+  right: 1rem;
+  z-index: 10000;
+  width: 2.3rem;
+  height: 2.3rem;
+  margin: -0.5rem;
+  padding: 0.5rem;
+
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 export const HeaderSpacer = styled.div`
@@ -29,10 +53,9 @@ export const HamburgerMenuItemsWrapper = styled.nav`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 0.5rem;
+  gap: 0.3rem;
 
   a {
-    text-decoration: none;
     width: 100%;
   }
 
@@ -40,17 +63,7 @@ export const HamburgerMenuItemsWrapper = styled.nav`
     border-radius: 8px;
     outline: 3px solid ${colors.lightblue};
   }
-
-  a:active,
-  a:hover {
-    text-decoration: none;
-    cursor: pointer;
-  }
 `;
-
-type Props = {
-  isSelected: boolean;
-};
 
 export const HamburgerMenuItem = styled.span<Props>`
   display: flex;
@@ -62,7 +75,7 @@ export const HamburgerMenuItem = styled.span<Props>`
   font-family: 'Whitney Light';
   font-weight: 100;
   width: 100%;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1rem;
   border-radius: 8px;
   background-color: ${(props) => props?.isSelected && colors.lighter};
   color: ${(props) => props?.isSelected && colors.lightblue};

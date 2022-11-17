@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
 
 import colors from '../../../config/colors';
-import { navBarHamburgerMenuContent } from '../../utils/NavBarText';
+import { navBarHamburgerMenuContent } from '../../utils/navBarText';
 import {
   ContainerWrapper,
   HamburgerMenuLogo,
+  CloseButtonIcon,
   HeaderSpacer,
   HamburgerMenuItemsWrapper,
   HamburgerMenuItem,
@@ -13,10 +14,14 @@ import {
   DownloadButton,
 } from './HamburgerMenuModalContent.style';
 
-const HamburgerMenuContent = () => {
+type Props = {
+  onClick: () => void;
+};
+
+const HamburgerMenuContent = (props: Props) => {
   const menuItems = navBarHamburgerMenuContent.map((item, index) => {
     return (
-      <Link key={item} to={item}>
+      <Link key={item} to={item.toLowerCase()}>
         <HamburgerMenuItem isSelected={index === 0}>{item}</HamburgerMenuItem>
       </Link>
     );
@@ -25,7 +30,10 @@ const HamburgerMenuContent = () => {
   return (
     <>
       <ContainerWrapper>
-        <HamburgerMenuLogo color={colors.black} />
+        <Link to="/">
+          <HamburgerMenuLogo color={colors.black} />
+        </Link>
+        <CloseButtonIcon onClick={props.onClick} />
         <HeaderSpacer />
         <HamburgerMenuItemsWrapper>{menuItems}</HamburgerMenuItemsWrapper>
       </ContainerWrapper>
