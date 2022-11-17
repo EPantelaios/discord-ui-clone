@@ -16,6 +16,7 @@ export const NavBarLoginButtonStyled = styled.button`
   color: black;
   font-size: 14px;
   transition: all 0.2s ease-in-out;
+  margin-left: auto;
 
   :hover,
   :active {
