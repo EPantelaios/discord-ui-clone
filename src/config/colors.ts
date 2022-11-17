@@ -1,6 +1,7 @@
 const colors = {
   blue: '#404EED',
   blurple: '#5865F2',
+  lightblue: '#0099CC',
   greyple: '#99AAB5',
   white: '#FFFFFF',
   black: '#000000',
@@ -8,7 +9,7 @@ const colors = {
   darker: '#23272A',
   darkest: '#1B1E21',
   light: '#E6E6E6',
-  lighter: '#F2F2F2',
+  lighter: '#F6F6F6',
   lightest: '#F9F9F9',
   green: '#57F287',
   yellow: '#FEE75C',
