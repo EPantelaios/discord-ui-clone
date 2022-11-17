@@ -1,5 +1,5 @@
 import { HeaderContainer } from './Header.style';
-import NavBar from './NavBar';
+import NavBar from '../NavBar/NavBar';
 
 function Header() {
   return (

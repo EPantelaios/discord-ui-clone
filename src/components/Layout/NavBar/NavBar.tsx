@@ -3,18 +3,18 @@ import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import useResizeObserver from 'use-resize-observer';
 
-import { deviceSize } from '../../config/device';
-import Modal from '../UI/Modal';
-import HamburgerMenu from './HamburgerMenu/HamburgerMenu';
-import HamburgerMenuModalContent from './HamburgerMenu/HamburgerMenuModalContent';
+import { deviceSize } from '../../../config/device';
+import Modal from '../../UI/Modal';
+import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
+import HamburgerMenuModalContent from '../HamburgerMenu/HamburgerMenuModalContent';
 import {
   NavBarContainer,
   NavBarWrapper,
   NavBarLogoWrapper,
 } from './NavBar.style';
-import NavBarLoginButton from './NavBarContent/NavBarLoginButton';
-import NavBarLogo from './NavBarContent/NavBarLogo';
-import NavBarMainNavigation from './NavBarContent/NavBarMainNavigation';
+import NavBarLoginButton from '../NavBarContent/NavBarLoginButton';
+import NavBarLogo from '../NavBarContent/NavBarLogo';
+import NavBarMainNavigation from '../NavBarContent/NavBarMainNavigation';
 
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
