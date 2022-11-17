@@ -14,9 +14,12 @@ import {
 } from './NavBar.style';
 import NavBarLoginButton from './NavBarContent/NavBarLoginButton';
 import NavBarLogo from './NavBarContent/NavBarLogo';
+import NavBarMainNavigation from './NavBarContent/NavBarMainNavigation';
 
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuClosing, setIsMenuClosing] = useState(false);
+
   const { ref, width } = useResizeObserver<HTMLDivElement>({
     box: 'border-box',
   });
@@ -30,27 +33,38 @@ function NavBar() {
     return false;
   }, [ref, width]);
 
-  console.log('isBigScreen', isBigScreen);
+  const closeMenuHandler = () => {
+    setIsMenuClosing(true);
+    setTimeout(() => {
+      //wait for animation to finish
+      setIsMenuOpen(false);
+    }, 300);
+  };
+
+  const hamburgerMenuOpenHandler = () => {
+    setIsMenuOpen(true);
+    setIsMenuClosing(false);
+  };
 
   return (
     <>
       {!isBigScreen && isMenuOpen && (
-        <Modal onClose={() => setIsMenuOpen(false)}>
-          <HamburgerMenuModalContent />
+        <Modal onClose={closeMenuHandler} isClosing={isMenuClosing}>
+          <HamburgerMenuModalContent onClick={closeMenuHandler} />
         </Modal>
       )}
       <NavBarContainer ref={ref}>
         <NavBarWrapper>
           <NavBarLogoWrapper>
-            <NavBarLogo />
+            <Link to="/">
+              <NavBarLogo />
+            </Link>
           </NavBarLogoWrapper>
+          {isBigScreen && <NavBarMainNavigation />}
           <NavBarLoginButton>
-            {/* <Link to="/login">Login</Link> */}
-            Login
+            <Link to="/login">Login</Link>
           </NavBarLoginButton>
-          {!isBigScreen && (
-            <HamburgerMenu onClick={() => setIsMenuOpen(true)} />
-          )}
+          {!isBigScreen && <HamburgerMenu onClick={hamburgerMenuOpenHandler} />}
         </NavBarWrapper>
       </NavBarContainer>
     </>

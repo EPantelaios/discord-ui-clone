@@ -9,10 +9,12 @@ type PropsBackdrop = {
 };
 
 type PropsModalOverlay = {
+  isClosing?: boolean;
   children?: React.ReactNode;
 };
 
 type PropsModal = {
+  isClosing?: boolean;
   onClose: () => void;
   children?: React.ReactNode;
 };
@@ -22,29 +24,27 @@ const Backdrop = (props: PropsBackdrop) => {
 };
 
 const ModalOverlay = (props: PropsModalOverlay) => {
-  return (
-    <div className={classes.modal}>
-      <div>{props.children}</div>
-    </div>
-  );
+  const classesModal = `${classes.modal} ${
+    props.isClosing ? classes.closingAnimation : ''
+  }`;
+
+  return <div className={classesModal}>{props.children}</div>;
 };
 
 const portalElement = document.getElementById('overlays') as HTMLElement;
 
 const Modal = (props: PropsModal) => {
-  useEffect(() => {
-    document.body.style.overflow = 'hidden';
-    return () => {
-      document.body.style.overflow = 'unset';
-    };
-  }, []);
-
   return (
     <>
-      {ReactDOM.createPortal(<Backdrop onClose={props.onClose} />, portalElement)}
       {ReactDOM.createPortal(
-        <ModalOverlay>{props.children}</ModalOverlay>,
-        portalElement,
+        <Backdrop onClose={props.onClose} />,
+        portalElement
+      )}
+      {ReactDOM.createPortal(
+        <ModalOverlay isClosing={props.isClosing}>
+          {props.children}
+        </ModalOverlay>,
+        portalElement
       )}
     </>
   );

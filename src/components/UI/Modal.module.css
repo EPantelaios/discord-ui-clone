@@ -20,6 +20,12 @@
   z-index: 10000;
   overflow-y: auto;
   animation: slide-left 300ms ease-out forwards;
+  overflow-y: visible;
+}
+
+.closingAnimation {
+  pointer-events: none;
+  animation: slide-right 300ms ease-out forwards;
 }
 
 @keyframes slide-left {
@@ -30,6 +36,18 @@
 
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-right {
+  from {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(10rem);
   }
 }
