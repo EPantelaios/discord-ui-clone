@@ -1,9 +1,10 @@
+import { Link } from 'react-router-dom';
+
 import { navBarContent } from '../../utils/navBarText';
 import {
   MainNavigationMenuWrapper,
   MainNavigationMenuItem,
 } from './NavBarMainNavigation.style';
-import { Link } from 'react-router-dom';
 
 function NavBarMainNavigation() {
   const mainNavigationMenuItems = navBarContent.map((item) => {

@@ -7,14 +7,15 @@ import { deviceSize } from '../../../config/device';
 import Modal from '../../UI/Modal';
 import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
 import HamburgerMenuModalContent from '../HamburgerMenu/HamburgerMenuModalContent';
+import NavBarLoginButton from '../NavBarContent/NavBarLoginButton';
+import NavBarLogo from '../NavBarContent/NavBarLogo';
+import NavBarMainNavigation from '../NavBarContent/NavBarMainNavigation';
 import {
   NavBarContainer,
   NavBarWrapper,
   NavBarLogoWrapper,
+  NavBarRightSide,
 } from './NavBar.style';
-import NavBarLoginButton from '../NavBarContent/NavBarLoginButton';
-import NavBarLogo from '../NavBarContent/NavBarLogo';
-import NavBarMainNavigation from '../NavBarContent/NavBarMainNavigation';
 
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -61,10 +62,14 @@ function NavBar() {
             </Link>
           </NavBarLogoWrapper>
           {isBigScreen && <NavBarMainNavigation />}
-          <NavBarLoginButton>
-            <Link to="/login">Login</Link>
-          </NavBarLoginButton>
-          {!isBigScreen && <HamburgerMenu onClick={hamburgerMenuOpenHandler} />}
+          <NavBarRightSide>
+            <Link to="/login">
+              <NavBarLoginButton>Login</NavBarLoginButton>
+            </Link>
+            {!isBigScreen && (
+              <HamburgerMenu onClick={hamburgerMenuOpenHandler} />
+            )}
+          </NavBarRightSide>
         </NavBarWrapper>
       </NavBarContainer>
     </>

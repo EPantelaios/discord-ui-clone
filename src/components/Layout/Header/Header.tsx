@@ -1,18 +1,13 @@
-import { HeaderContainer } from './Header.style';
+import HeroContainer from '../../HeroContainer/HeroContainer';
 import NavBar from '../NavBar/NavBar';
+import { HeaderContainer } from './Header.style';
 
 function Header() {
   return (
-    // <>
     <HeaderContainer>
       <NavBar />
-      {/* <HeroContainer /> */}
-      {/* {title}
-        {paragraph}
-        {download button}
-        {open discord in your browser button} */}
+      <HeroContainer />
     </HeaderContainer>
-    // </>
   );
 }
 
