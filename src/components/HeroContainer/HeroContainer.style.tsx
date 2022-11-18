@@ -12,7 +12,7 @@ export const HeroContainerWrapper = styled.div`
   max-width: ${size.maxWidthContentDesktop};
 
   @media ${device.tablet} {
-    padding: 5rem 2.5rem;
+    padding: 5rem 2.5rem 7rem 2.5rem;
     max-width: ${size.maxWidthContentTablet};
   }
 
