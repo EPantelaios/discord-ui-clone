@@ -12,12 +12,11 @@ type Props = {
 export const ContainerWrapper = styled.div`
   height: 90vh;
   padding: 1.5rem 3rem 7.5rem 1.5rem;
-`;
-
-export const HeaderMenuContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  > a {
+    display: inline-block;
+    padding: 0.5rem;
+    margin: -0.5rem;
+  }
 `;
 
 export const HamburgerMenuLogo = styled(NavBarLogo)`
@@ -43,8 +42,8 @@ export const HeaderSpacer = styled.div`
   width: 100%;
   height: 1px;
   background: #ebedef;
-  margin-top: 24px;
-  margin-bottom: 16px;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
   color: ${colors.grey};
 `;
 
@@ -96,27 +95,13 @@ export const Footer = styled.footer`
 export const DownloadButtonIcon = styled(DownloadIcon)``;
 
 export const DownloadButton = styled.button`
-  position: block;
-  display: inline-flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  border-radius: 40px;
-  padding: 0.5rem 1rem;
-  writing-mode: horizontal-tb !important;
-  border: none;
-  text-decoration: none;
-  text-align: center;
-  font-size: 14px;
+  all: inherit;
   background-color: ${colors.blurple};
   color: ${colors.white};
-  transition: all 0.2s ease-in-out;
+  padding: 0.5rem 1rem;
 
   :hover,
   :active {
-    cursor: pointer;
-    background-color: hsl(235, 86.1%, 71.8%);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    background-color: ${colors.lightpurple};
   }
 `;
