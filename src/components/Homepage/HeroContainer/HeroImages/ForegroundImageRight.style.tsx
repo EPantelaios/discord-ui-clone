@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import foregroundImageRight from '../../../assets/right_bg_landing_header.svg';
 
-import { device } from '../../../config/device';
+import foregroundImageRight from '../../../../assets/right_bg_landing_header.svg';
+import { device } from '../../../../config/device';
 
 export const ForegroundImageRightIcon = styled.img`
   display: none;

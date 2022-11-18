@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-import { ReactComponent as CloseIcon } from '../../../assets/close_icon.svg';
-import { ReactComponent as DownloadIcon } from '../../../assets/download_button_icon.svg';
-import colors from '../../../config/colors';
+import { ReactComponent as CloseIcon } from '../../../../assets/close_icon.svg';
+import { ReactComponent as DownloadIcon } from '../../../../assets/download_button_icon.svg';
+import colors from '../../../../config/colors';
 import NavBarLogo from '../NavBarContent/NavBarLogo';
 
 type Props = {

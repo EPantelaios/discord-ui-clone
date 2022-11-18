@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import colors from '../../config/colors';
-import { size, device, deviceSize } from '../../config/device';
+import colors from '../../../config/colors';
+import { size, device, deviceSize } from '../../../config/device';
 
 export const HeroContainerWrapper = styled.div`
   padding: 2.5rem 1.5rem;

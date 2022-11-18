@@ -1,4 +1,4 @@
-import HomePageButton from '../../UI/HomePageButton';
+import HomePageButton from '../../../UI/HomePageButton';
 import { NavBarLoginButtonStyled } from './NavBarLoginButton.style';
 
 type Props = {

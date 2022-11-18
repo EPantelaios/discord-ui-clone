@@ -1,7 +1,5 @@
-import React from 'react';
-
+import HomePageButton from '../../UI/HomePageButton';
 import { DownloadButtonIcon } from '../Layout/HamburgerMenu/HamburgerMenuModalContent.style';
-import HomePageButton from '../UI/HomePageButton';
 import {
   HeroButtonsContainer,
   HeroButtonDownload,

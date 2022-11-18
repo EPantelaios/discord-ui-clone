@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { device } from '../../../config/device';
+import { device } from '../../../../config/device';
 
 export const HeroImageWrapper = styled.div`
   position: relative;

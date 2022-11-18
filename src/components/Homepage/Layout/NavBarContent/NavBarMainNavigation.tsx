@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import { navBarContent } from '../../utils/navBarText';
+import { navBarContent } from '../../../../utils/navBarText';
 import {
   MainNavigationMenuWrapper,
   MainNavigationMenuItem,

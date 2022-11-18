@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import colors from '../../config/colors';
-import { device } from '../../config/device';
+import colors from '../../../config/colors';
+import { device } from '../../../config/device';
 
 export const HeroButtonsContainer = styled.div`
   display: flex;

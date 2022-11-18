@@ -23,6 +23,7 @@ export const HomePageButtonStyled = styled.button<Props>`
   outline: none;
   text-decoration: none;
   text-align: center;
+  z-index: 1000;
   transition: all 0.1s ease-in-out;
   font-size: ${(props) => (props.fontSize ? props.fontSize : '14px')};
   background-color: ${(props) =>

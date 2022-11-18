@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import foregroundImageLeft from '../../../assets/left_bg_landing_header.svg';
-import { device } from '../../../config/device';
+import foregroundImageLeft from '../../../../assets/left_bg_landing_header.svg';
+import { device } from '../../../../config/device';
 
 export const ForegroundImageLeftIcon = styled.img`
   display: block;

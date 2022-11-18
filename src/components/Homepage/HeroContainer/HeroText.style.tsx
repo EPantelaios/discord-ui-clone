@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import colors from '../../config/colors';
-import { device, size } from '../../config/device';
+import colors from '../../../config/colors';
+import { device, size } from '../../../config/device';
 
 export const HeroTextWrapper = styled.div`
   display: flex;

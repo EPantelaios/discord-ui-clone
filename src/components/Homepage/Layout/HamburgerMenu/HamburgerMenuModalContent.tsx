@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 
-import colors from '../../../config/colors';
-import HomePageButton from '../../UI/HomePageButton';
-import { navBarHamburgerMenuContent } from '../../utils/navBarText';
+import colors from '../../../../config/colors';
+import { navBarHamburgerMenuContent } from '../../../../utils/navBarText';
+import HomePageButton from '../../../UI/HomePageButton';
 import {
   ContainerWrapper,
   HamburgerMenuLogo,

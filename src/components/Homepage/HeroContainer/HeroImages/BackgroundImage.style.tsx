@@ -1,6 +1,7 @@
 import styled from 'styled-components';
-import { device } from '../../../config/device';
-import backgroundImage from '../../../assets/center_bg_landing_header.svg';
+
+import backgroundImage from '../../../../assets/center_bg_landing_header.svg';
+import { device } from '../../../../config/device';
 
 export const BackgroundImageIcon = styled.img`
   display: none;

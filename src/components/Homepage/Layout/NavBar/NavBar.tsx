@@ -3,8 +3,8 @@ import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import useResizeObserver from 'use-resize-observer';
 
-import { deviceSize } from '../../../config/device';
-import Modal from '../../UI/Modal';
+import { deviceSize } from '../../../../config/device';
+import Modal from '../../../UI/Modal';
 import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
 import HamburgerMenuModalContent from '../HamburgerMenu/HamburgerMenuModalContent';
 import NavBarLoginButton from '../NavBarContent/NavBarLoginButton';
