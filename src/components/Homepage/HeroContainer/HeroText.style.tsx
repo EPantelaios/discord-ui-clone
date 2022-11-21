@@ -41,14 +41,14 @@ export const HeroParagraph = styled.div`
   font-family: 'Whitney Book';
   color: ${colors.white};
   line-height: calc(1.5rem + 0.3vw);
-  transition: font 0.1s ease;
+  transition: font-size 0.2s ease;
 
   @media ${device.tablet} {
-    font-size: calc(0.3rem + 1.5vw);
+    font-size: clamp(1rem, 2vw, 1.2rem);
   }
 
   @media ${device.desktop} {
-    font-size: 1.25rem;
+    font-size: clamp(1.2rem, 2vw, 1.25rem);
     line-height: 1.8rem;
   }
 `;
