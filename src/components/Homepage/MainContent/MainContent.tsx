@@ -1,9 +1,12 @@
 import {
   MainContentItemsText,
-  MainContentItemsFooter,
-} from '../../../utils/MainContentItemsText';
+  MainContentLastItemText,
+  MainContentFooterText,
+} from '../../../utils/mainContentItemsText';
 import { MainContentWrapper } from './MainContent.style';
+import MainContentFooter from './MainContentFooter';
 import MainContentItem from './MainContentItem';
+import MainContentItemFooter from './MainContentLastItem';
 
 type ItemProps = {
   backgroundColor: string;
@@ -28,7 +31,33 @@ function MainContent() {
     }
   );
 
-  return <MainContentWrapper>{mainContentItems}</MainContentWrapper>;
+  const mainContentLastItem = MainContentLastItemText.map(
+    (item: ItemProps, index) => {
+      return (
+        <MainContentItemFooter
+          key={index}
+          backgroundColor={item.backgroundColor}
+          src={item.src}
+          title={item.title}
+          paragraph={item.paragraph}
+        />
+      );
+    }
+  );
+
+  // const mainContentFooter = MainContentFooterText.map(
+  //   (item: ItemProps, index) => {
+  //     return <MainContentFooter />;
+  //   }
+  // );
+
+  return (
+    <MainContentWrapper>
+      {mainContentItems}
+      {mainContentLastItem}
+      {/* {mainContentFooter} */}
+    </MainContentWrapper>
+  );
 }
 
 export default MainContent;

@@ -5,7 +5,7 @@ import {
   MainContentItemFooterText,
   MainContentItemFooterTitle,
   MainContentItemFooterImg,
-} from './MainContentItemFooter.style';
+} from './MainContentLastItem.style';
 
 type Props = {
   backgroundColor?: string;

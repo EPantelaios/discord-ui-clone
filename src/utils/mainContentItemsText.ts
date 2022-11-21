@@ -2,6 +2,7 @@ import image3 from '../assets/fandom_landing.svg';
 import image2 from '../assets/hanging_out_easy_landing.svg';
 import image1 from '../assets/invite_only_landing.svg';
 import lastImage from '../assets/just_chiling_landing.svg';
+import starsIcon from '../assets/tiny_stars_landing.svg';
 import colors from '../config/colors';
 
 const MainContentItemsText = [
@@ -28,7 +29,7 @@ const MainContentItemsText = [
   },
 ];
 
-const MainContentItemsFooter = [
+const MainContentLastItemText = [
   {
     backgroundColor: colors.lighter,
     src: lastImage,
@@ -38,4 +39,12 @@ const MainContentItemsFooter = [
   },
 ];
 
-export { MainContentItemsText, MainContentItemsFooter };
+const MainContentFooterText = [
+  {
+    backgroundColor: colors.lighter,
+    src: starsIcon,
+    title: 'Ready to start your journey?',
+  },
+];
+
+export { MainContentItemsText, MainContentLastItemText, MainContentFooterText };
