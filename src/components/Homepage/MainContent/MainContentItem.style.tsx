@@ -7,7 +7,11 @@ type PropsContainer = {
 };
 
 type PropsWrapper = {
-  isEven: boolean;
+  isOdd?: boolean;
+};
+
+type imgProps = {
+  src: string;
 };
 
 export const MainContentItemContainer = styled.div<PropsContainer>`
@@ -35,18 +39,14 @@ export const MainContentItemWrapper = styled.div<PropsWrapper>`
 
   @media ${device.tablet} {
     display: flex;
-    flex-direction: ${(props) => (props.isEven ? 'row' : 'row-reverse')};
+    flex-direction: ${(props) => (!props?.isOdd && 'row-reverse') || 'row'};
     justify-content: space-around;
     align-items: center;
     flex-wrap: nowrap;
-    gap: 3rem;
-  }
-
-  @media ${device.desktop} {
   }
 `;
 
-export const MainContentItemImg = styled.img.attrs((props) => ({
+export const MainContentItemImg = styled.img.attrs((props: imgProps) => ({
   src: props.src,
 }))`
   width: 100%;
@@ -58,28 +58,35 @@ export const MainContentItemImg = styled.img.attrs((props) => ({
 
 export const MainContentItemText = styled.div`
   margin-top: 1.25rem;
-  font-size: clamp(1rem, 2vw, 1.25rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 1rem;
 
   @media ${device.desktop} {
-    max-width: 330px;
+    max-width: 350px;
     gap: 2rem;
   }
 `;
 
 export const MainContentItemTitle = styled.h1`
   font-family: 'Open Sans', sans-serif;
-  font-size: 3rem;
+  font-size: clamp(1rem, 4vw, 3rem);
   line-height: 1.2;
+
+  @media ${device.tablet} {
+    font-size: clamp(2.5rem, 4vw, 3rem);
+  }
 `;
 
 export const MainContentItemParagraph = styled.div`
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.2rem;
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
   font-weight: 300;
   line-height: 1.5;
+
+  @media ${device.tablet} {
+    font-size: clamp(1.1rem, 2vw, 1.2rem);
+  }
 `;

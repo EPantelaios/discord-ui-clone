@@ -12,13 +12,13 @@ type Props = {
   src: string;
   title: string;
   paragraph: string;
-  isEven: boolean;
+  isOdd?: boolean;
 };
 
 function MainContentItem(props: Props) {
   return (
     <MainContentItemContainer backgroundColor={props.backgroundColor}>
-      <MainContentItemWrapper isEven={props.isEven}>
+      <MainContentItemWrapper isOdd={props.isOdd}>
         <MainContentItemImg src={props.src} />
         <MainContentItemText>
           <MainContentItemTitle>{props.title}</MainContentItemTitle>

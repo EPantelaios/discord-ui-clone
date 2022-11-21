@@ -22,7 +22,7 @@ function MainContent() {
           src={item.src}
           title={item.title}
           paragraph={item.paragraph}
-          isEven={index % 2 === 0}
+          isOdd={(index + 1) % 2 === 1}
         />
       );
     }
