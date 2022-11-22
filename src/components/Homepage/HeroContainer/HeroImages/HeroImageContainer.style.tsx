@@ -9,6 +9,7 @@ export const HeroImageWrapper = styled.div`
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  pointer-events: none;
 
   @media ${device.tablet} {
     position: absolute;

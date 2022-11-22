@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Header from './components/Homepage/Layout/Header/Header';
 import MainContent from './components/Homepage/MainContent/MainContent';
 
