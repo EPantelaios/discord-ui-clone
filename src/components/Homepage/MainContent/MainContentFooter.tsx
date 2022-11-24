@@ -1,4 +1,3 @@
-import { MainContentFooterText } from '../../../utils/mainContentItemsText';
 import HomePageButton from '../../UI/HomePageButton';
 import { DownloadButtonIcon } from '../Layout/HamburgerMenu/HamburgerMenuModalContent.style';
 import {

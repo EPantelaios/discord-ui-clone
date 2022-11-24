@@ -15,6 +15,12 @@ type ItemProps = {
   paragraph: string;
 };
 
+type ItemFooterProps = {
+  backgroundColor: string;
+  src: string;
+  title: string;
+};
+
 function MainContent() {
   const mainContentItems = MainContentItemsText.map(
     (item: ItemProps, index) => {
@@ -45,17 +51,24 @@ function MainContent() {
     }
   );
 
-  // const mainContentFooter = MainContentFooterText.map(
-  //   (item: ItemProps, index) => {
-  //     return <MainContentFooter />;
-  //   }
-  // );
+  const mainContentFooter = MainContentFooterText.map(
+    (item: ItemFooterProps, index) => {
+      return (
+        <MainContentFooter
+          key={index}
+          backgroundColor={item.backgroundColor}
+          src={item.src}
+          title={item.title}
+        />
+      );
+    }
+  );
 
   return (
     <MainContentWrapper>
       {mainContentItems}
       {mainContentLastItem}
-      {/* {mainContentFooter} */}
+      {mainContentFooter}
     </MainContentWrapper>
   );
 }
