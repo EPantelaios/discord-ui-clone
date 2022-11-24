@@ -19,7 +19,7 @@ export const MainContentItemFooterContainer = styled.div<PropsContainer>`
   }
 
   @media ${device.desktop} {
-    padding: 7.5rem 2.5rem;
+    padding: 7.5rem 2.5rem 5rem 2.5rem;
   }
 `;
 
