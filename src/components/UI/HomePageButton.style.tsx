@@ -16,6 +16,9 @@ export const HomePageButtonStyled = styled.button<Props>`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-basis: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
   gap: 0.5rem;
   border-radius: 40px;
   writing-mode: horizontal-tb !important;
