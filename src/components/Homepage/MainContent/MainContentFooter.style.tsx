@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
+import { ReactComponent as DownloadIcon } from '../../../assets/download_button_icon.svg';
 import colors from '../../../config/colors';
-
 import { size, device } from '../../../config/device';
 
 type PropsContainer = {
@@ -12,80 +12,81 @@ type imgProps = {
   src: string;
 };
 
-export const MainContentItemFooterContainer = styled.div<PropsContainer>`
+export const FooterContainer = styled.div<PropsContainer>`
   background-color: ${(props) => props?.backgroundColor || 'white'};
-  padding: 3.5rem 1.5rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  padding-bottom: 3.5rem;
 
   @media ${device.tablet} {
-    padding: 5rem 2.5rem;
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+    padding-bottom: 5rem;
   }
 
   @media ${device.desktop} {
-    padding: 7.5rem 2.5rem;
+    padding-bottom: 6.5rem;
   }
 `;
 
-export const MainContentItemFooterWrapper = styled.div`
+export const FooterWrapper = styled.div`
   max-width: ${size.maxWidthContentDesktop};
   margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-`;
-
-export const MainContentItemFooterImg = styled.img.attrs((props: imgProps) => ({
-  src: props.src,
-}))`
-  width: 100%;
-  margin-top: 1.25rem;
-
-  @media ${device.desktop} {
-    max-width: 90%;
-  }
-`;
-
-export const MainContentItemFooterText = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: flex-start;
-  gap: 1rem;
 
   @media ${device.tablet} {
     align-items: center;
     text-align: center;
-    max-width: 980px;
   }
 `;
 
-export const MainContentItemFooterTitle = styled.h1`
-  text-transform: uppercase;
-  font-size: clamp(1.5rem, 4vw, 3.2rem);
-
-  @media ${device.tablet} {
-    font-size: clamp(3rem, 4vw, 3.2rem);
-  }
+export const IconWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 `;
 
-export const MainContentItemFooterParagraph = styled.div`
-  font-family: 'Open Sans', sans-serif;
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  font-weight: 300;
-  line-height: 1.8;
-
-  @media ${device.tablet} {
-    font-size: clamp(1.05rem, 2vw, 1.2rem);
-  }
+export const FooterStarsIcon = styled.img.attrs((props: imgProps) => ({
+  src: props.src,
+}))`
+  user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+  pointer-events: none;
+  width: 550px;
+  height: auto;
+  margin-bottom: -1rem;
 `;
 
-export const MainContentFooterButtonDownload = styled.span`
+export const FooterTitle = styled.h1`
+  font-size: 2.4rem;
+  align-self: center;
+`;
+
+export const ButtonWrapper = styled.div`
+  margin-top: 2.5rem;
+`;
+
+export const DownloadButtonIcon = styled(DownloadIcon)``;
+
+export const DownloadButton = styled.span`
   all: inherit;
   padding: 1rem 2rem;
   font-size: 1.2rem;
+  color: ${colors.white};
+  background-color: ${colors.blurple};
 
   :hover,
   :active {
-    color: ${colors.lightpurple};
+    background-color: ${colors.lightpurple};
   }
 `;

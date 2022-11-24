@@ -1,25 +1,40 @@
 import { MainContentFooterText } from '../../../utils/mainContentItemsText';
 import HomePageButton from '../../UI/HomePageButton';
 import { DownloadButtonIcon } from '../Layout/HamburgerMenu/HamburgerMenuModalContent.style';
-import { MainContentFooterContainer, MainContentFooterWrapper, MainContentFooterStarsIcon, MainContentFooterTextMainContentFooterButtonDownload } from './MainContentFooter.style';
+import {
+  FooterContainer,
+  FooterWrapper,
+  IconWrapper,
+  FooterStarsIcon,
+  FooterTitle,
+  ButtonWrapper,
+  DownloadButton,
+} from './MainContentFooter.style';
+
+type Props = {
+  backgroundColor?: string;
+  src: string;
+  title: string;
+};
 
 function MainContentFooter(props: Props) {
   return (
-    <MainContentFooterContainer>
-      <MainContentFooterWrapper>
-        <MainContentFooterStarsIcon>
-        <MainContentFooterText>
-          {props.title}
-        </MainContentFooterText>
-
-        <HomePageButton>
-          <MainContentFooterButtonDownload>
-            <DownloadButtonIcon />
-            Download for Windows
-          </MainContentFooterButtonDownload>
-        </HomePageButton>
-      </MainContentFooterWrapper>
-    </MainContentFooterContainer>
+    <FooterContainer backgroundColor={props.backgroundColor}>
+      <FooterWrapper>
+        <IconWrapper>
+          <FooterStarsIcon src={props.src} />
+        </IconWrapper>
+        <FooterTitle>{props.title}</FooterTitle>
+        <ButtonWrapper>
+          <HomePageButton>
+            <DownloadButton>
+              <DownloadButtonIcon />
+              Download for Windows
+            </DownloadButton>
+          </HomePageButton>
+        </ButtonWrapper>
+      </FooterWrapper>
+    </FooterContainer>
   );
 }
 
