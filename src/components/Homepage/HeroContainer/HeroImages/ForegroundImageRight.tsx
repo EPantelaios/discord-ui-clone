@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { ForegroundImageRightIcon } from './ForegroundImageRight.style';
 
 function ForegroundImageRight() {
