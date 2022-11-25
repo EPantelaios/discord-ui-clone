@@ -25,7 +25,7 @@ export const FooterContainer = styled.div<PropsContainer>`
   }
 
   @media ${device.desktop} {
-    padding-bottom: 6.5rem;
+    padding-bottom: 7.5rem;
   }
 `;
 
