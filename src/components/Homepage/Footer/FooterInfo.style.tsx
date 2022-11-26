@@ -19,7 +19,7 @@ export const Container = styled.div`
   max-width: 80vw;
 
   @media ${device.tablet} {
-    width: 230px;
+    max-width: 230px;
   }
 `;
 
@@ -52,6 +52,8 @@ export const LanguageIcon = styled.img.attrs(() => ({
 
 export const LanguageText = styled.div`
   color: ${colors.white};
+  flex-grow: 0;
+  flex-shrink: 0;
 `;
 
 export const LanguageArrow = styled(ArrowDown)``;
