@@ -1,7 +1,7 @@
 import {
   FooterContainer,
   FooterWrapper,
-  FooterMainWrapper,
+  FooterContentWrapper,
 } from './Footer.style';
 import FooterMainContent from './FooterMainContent';
 import FooterSignature from './FooterSignature';
@@ -11,10 +11,10 @@ function Footer() {
   return (
     <FooterContainer>
       <FooterWrapper>
-        <FooterMainWrapper>
+        <FooterContentWrapper>
           <FooterInfo />
           <FooterMainContent />
-        </FooterMainWrapper>
+        </FooterContentWrapper>
         <FooterSignature />
       </FooterWrapper>
     </FooterContainer>
