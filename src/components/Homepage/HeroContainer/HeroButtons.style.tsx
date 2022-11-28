@@ -43,9 +43,13 @@ export const HeroButtonOpenApp = styled.span`
   font-size: 1.2rem;
   color: ${colors.white};
   background-color: ${colors.darker};
+  border: 1px solid ${colors.darker};
+  outline: 1px solid ${colors.darker};
 
   :hover,
   :active {
     background-color: ${colors.darkestgrey};
+    border: 1px solid ${colors.darkestgrey};
+    outline: 1px solid ${colors.darkestgrey};
   }
 `;

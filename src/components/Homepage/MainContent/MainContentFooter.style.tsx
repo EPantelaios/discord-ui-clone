@@ -80,13 +80,17 @@ export const DownloadButtonIcon = styled(DownloadIcon)``;
 
 export const DownloadButton = styled.span`
   all: inherit;
-  padding: 1rem 2rem;
+  padding: 0.9rem 1.8rem;
   font-size: 1.2rem;
   color: ${colors.white};
   background-color: ${colors.blurple};
+  border: 1px solid ${colors.blurple};
+  outline: 1px solid ${colors.blurple};
 
   :hover,
   :active {
     background-color: ${colors.lightpurple};
+    border: 1px solid ${colors.lightpurple};
+    outline: 1px solid ${colors.lightpurple};
   }
 `;
