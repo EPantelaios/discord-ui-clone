@@ -93,7 +93,7 @@ export const Footer = styled.footer`
 
 export const DownloadButtonIcon = styled(DownloadIcon)``;
 
-export const DownloadButton = styled.button`
+export const DownloadButton = styled.span`
   all: inherit;
   background-color: ${colors.blurple};
   color: ${colors.white};
