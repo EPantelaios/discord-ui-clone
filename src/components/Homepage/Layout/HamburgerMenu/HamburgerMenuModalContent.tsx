@@ -22,7 +22,7 @@ type Props = {
 const HamburgerMenuContent = (props: Props) => {
   const menuItems = navBarHamburgerMenuContent.map((item, index) => {
     return (
-      <Link key={item} to={item.toLowerCase()}>
+      <Link key={item} to={item.replace(/\s/g, '').toLowerCase()}>
         <HamburgerMenuItem isSelected={index === 0}>{item}</HamburgerMenuItem>
       </Link>
     );

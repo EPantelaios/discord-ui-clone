@@ -17,6 +17,7 @@ export const Container = styled.div`
   flex-grow: 1;
   gap: 1.5rem;
   max-width: 80vw;
+  margin-bottom: 2rem;
 
   @media ${device.tablet} {
     max-width: 230px;
@@ -36,7 +37,7 @@ export const LanguageWrapper = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
+  gap: 0.8rem;
 
   :hover {
     cursor: pointer;
@@ -52,6 +53,7 @@ export const LanguageIcon = styled.img.attrs(() => ({
 
 export const LanguageText = styled.div`
   color: ${colors.white};
+  font-size: 0.9rem;
   flex-grow: 0;
   flex-shrink: 0;
 `;
@@ -63,7 +65,7 @@ export const SocialMediaIcons = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
   color: ${colors.white};
 `;
 

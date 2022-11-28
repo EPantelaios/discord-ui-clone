@@ -14,7 +14,7 @@ export const FooterWrapper = styled.div`
   margin: auto;
 
   @media ${device.tablet} {
-    padding: 5rem 2.5rem;
+    padding: 5rem 2.5rem 4rem 2.5rem;
   }
 `;
 
