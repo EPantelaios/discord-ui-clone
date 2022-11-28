@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import FooterText from '../../../utils/footerText';
 import {
   FooterMainContentContainer,
@@ -11,8 +12,12 @@ function FooterMainContent() {
     return (
       <FooterColumn key={index}>
         <FooterColumnTitle>{item.title}</FooterColumnTitle>
-        {item.items.map((item, index) => {
-          return <FooterColumnItem key={index}>{item}</FooterColumnItem>;
+        {item.items.map((item) => {
+          return (
+            <Link key={item} to={item.replace(/\s/g, '').toLowerCase()}>
+              <FooterColumnItem>{item}</FooterColumnItem>
+            </Link>
+          );
         })}
       </FooterColumn>
     );

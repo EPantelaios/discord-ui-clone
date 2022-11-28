@@ -42,10 +42,8 @@ export const FooterColumnTitle = styled.h5`
   color: ${colors.blue};
 `;
 
-export const FooterColumnItem = styled.a.attrs((props: Props) => ({
-  href: props.src,
-}))`
-  hover: {
+export const FooterColumnItem = styled.span`
+  :hover {
     cursor: pointer;
     text-decoration: underline;
   }
