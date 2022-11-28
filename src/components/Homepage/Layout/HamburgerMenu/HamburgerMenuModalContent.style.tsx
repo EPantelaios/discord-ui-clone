@@ -44,7 +44,6 @@ export const HeaderSpacer = styled.div`
   background: #ebedef;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
-  color: ${colors.grey};
 `;
 
 export const HamburgerMenuItemsWrapper = styled.nav`
