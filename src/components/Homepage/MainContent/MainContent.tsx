@@ -1,3 +1,8 @@
+import { memo, useRef } from 'react';
+
+import { AnimationOnScroll } from 'react-animation-on-scroll';
+
+import useIsInViewport from '../../../hooks/useIsInViewport';
 import {
   MainContentItemsText,
   MainContentLastItemText,
@@ -7,6 +12,8 @@ import { MainContentWrapper } from './MainContent.style';
 import MainContentFooter from './MainContentFooter';
 import MainContentItem from './MainContentItem';
 import MainContentItemFooter from './MainContentLastItem';
+
+import 'animate.css/animate.min.css';
 
 type ItemProps = {
   backgroundColor: string;
@@ -21,18 +28,43 @@ type ItemFooterProps = {
   title: string;
 };
 
+let flagOnce = true;
+
 function MainContent() {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInViewport = useIsInViewport(ref);
+
   const mainContentItems = MainContentItemsText.map(
     (item: ItemProps, index) => {
       return (
-        <MainContentItem
-          key={index}
-          backgroundColor={item.backgroundColor}
-          src={item.src}
-          title={item.title}
-          paragraph={item.paragraph}
-          isOdd={(index + 1) % 2 === 1}
-        />
+        <div key={index} ref={ref}>
+          {!isInViewport && flagOnce ? (
+            <AnimationOnScroll
+              animateIn="animate__slideInUp"
+              duration={0.7}
+              offset={100}
+              initiallyVisible={false}
+              animatePreScroll
+              animateOnce
+            >
+              <MainContentItem
+                backgroundColor={item.backgroundColor}
+                src={item.src}
+                title={item.title}
+                paragraph={item.paragraph}
+                isOdd={(index + 1) % 2 === 1}
+              />
+            </AnimationOnScroll>
+          ) : (
+            <MainContentItem
+              backgroundColor={item.backgroundColor}
+              src={item.src}
+              title={item.title}
+              paragraph={item.paragraph}
+              isOdd={(index + 1) % 2 === 1}
+            />
+          )}
+        </div>
       );
     }
   );
@@ -40,13 +72,23 @@ function MainContent() {
   const mainContentLastItem = MainContentLastItemText.map(
     (item: ItemProps, index) => {
       return (
-        <MainContentItemFooter
-          key={index}
-          backgroundColor={item.backgroundColor}
-          src={item.src}
-          title={item.title}
-          paragraph={item.paragraph}
-        />
+        <div key={index}>
+          <AnimationOnScroll
+            animateIn="animate__slideInUp"
+            duration={0.7}
+            offset={100}
+            initiallyVisible={false}
+            animatePreScroll
+            animateOnce
+          >
+            <MainContentItemFooter
+              backgroundColor={item.backgroundColor}
+              src={item.src}
+              title={item.title}
+              paragraph={item.paragraph}
+            />
+          </AnimationOnScroll>
+        </div>
       );
     }
   );
@@ -67,10 +109,11 @@ function MainContent() {
   return (
     <MainContentWrapper>
       {mainContentItems}
+      {(flagOnce = false)}
       {mainContentLastItem}
       {mainContentFooter}
     </MainContentWrapper>
   );
 }
 
-export default MainContent;
+export default memo(MainContent);
