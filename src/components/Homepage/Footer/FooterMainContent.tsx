@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+
 import FooterText from '../../../utils/footerText';
 import {
   FooterMainContentContainer,

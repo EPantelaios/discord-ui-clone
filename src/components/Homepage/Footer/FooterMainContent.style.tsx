@@ -3,10 +3,6 @@ import styled from 'styled-components';
 import colors from '../../../config/colors';
 import { device } from '../../../config/device';
 
-type Props = {
-  src?: string;
-};
-
 export const FooterMainContentContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
