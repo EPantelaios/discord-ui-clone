@@ -1,8 +1,7 @@
-import { memo, useRef } from 'react';
+import { memo } from 'react';
 
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 
-import useIsInViewport from '../../../hooks/useIsInViewport';
 import {
   MainContentItemsText,
   MainContentLastItemText,
@@ -12,7 +11,6 @@ import { MainContentWrapper } from './MainContent.style';
 import MainContentFooter from './MainContentFooter';
 import MainContentItem from './MainContentItem';
 import MainContentItemFooter from './MainContentLastItem';
-
 import 'animate.css/animate.min.css';
 
 type ItemProps = {
@@ -28,34 +26,19 @@ type ItemFooterProps = {
   title: string;
 };
 
-let flagOnce = true;
-
 function MainContent() {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInViewport = useIsInViewport(ref);
-
   const mainContentItems = MainContentItemsText.map(
     (item: ItemProps, index) => {
       return (
-        <div key={index} ref={ref}>
-          {!isInViewport && flagOnce ? (
-            <AnimationOnScroll
-              animateIn="animate__slideInUp"
-              duration={0.7}
-              offset={100}
-              initiallyVisible={false}
-              animatePreScroll
-              animateOnce
-            >
-              <MainContentItem
-                backgroundColor={item.backgroundColor}
-                src={item.src}
-                title={item.title}
-                paragraph={item.paragraph}
-                isOdd={(index + 1) % 2 === 1}
-              />
-            </AnimationOnScroll>
-          ) : (
+        <div key={index}>
+          <AnimationOnScroll
+            animateIn="animate__slideInUp"
+            duration={0.7}
+            offset={50}
+            initiallyVisible={false}
+            animatePreScroll
+            animateOnce
+          >
             <MainContentItem
               backgroundColor={item.backgroundColor}
               src={item.src}
@@ -63,7 +46,7 @@ function MainContent() {
               paragraph={item.paragraph}
               isOdd={(index + 1) % 2 === 1}
             />
-          )}
+          </AnimationOnScroll>
         </div>
       );
     }
@@ -76,7 +59,7 @@ function MainContent() {
           <AnimationOnScroll
             animateIn="animate__slideInUp"
             duration={0.7}
-            offset={100}
+            offset={50}
             initiallyVisible={false}
             animatePreScroll
             animateOnce
@@ -109,7 +92,6 @@ function MainContent() {
   return (
     <MainContentWrapper>
       {mainContentItems}
-      {(flagOnce = false)}
       {mainContentLastItem}
       {mainContentFooter}
     </MainContentWrapper>
