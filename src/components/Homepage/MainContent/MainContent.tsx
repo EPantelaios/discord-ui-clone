@@ -33,8 +33,8 @@ function MainContent() {
         <div key={index}>
           <AnimationOnScroll
             animateIn="animate__slideInUp"
-            duration={0.7}
-            offset={50}
+            duration={0.8}
+            offset={100}
             initiallyVisible={false}
             animatePreScroll
             animateOnce
@@ -58,8 +58,8 @@ function MainContent() {
         <div key={index}>
           <AnimationOnScroll
             animateIn="animate__slideInUp"
-            duration={0.7}
-            offset={50}
+            duration={0.8}
+            offset={100}
             initiallyVisible={false}
             animatePreScroll
             animateOnce
