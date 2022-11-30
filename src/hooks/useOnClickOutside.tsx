@@ -1,9 +1,12 @@
 import { useEffect } from 'react';
 
-export const useOnClickOutside = (ref, handler) => {
+export const useOnClickOutside = (
+  ref: React.MutableRefObject<HTMLDivElement>,
+  handler: (item: unknown) => void
+) => {
   useEffect(() => {
-    const listener = (event) => {
-      if (!ref || !ref.current || ref.current.contains(event.target)) {
+    const listener = (event: MouseEvent | TouchEvent) => {
+      if (!ref || !ref.current || ref.current.contains(event.target as Node)) {
         return;
       }
 

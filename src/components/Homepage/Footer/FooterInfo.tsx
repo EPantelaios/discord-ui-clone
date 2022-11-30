@@ -27,7 +27,9 @@ function FooterSymbols() {
     defaultLanguage.name
   );
 
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement>(
+    null
+  ) as React.MutableRefObject<HTMLDivElement>;
 
   useOnClickOutside(ref, () => setIsDropdownMenuOpen(false));
 
