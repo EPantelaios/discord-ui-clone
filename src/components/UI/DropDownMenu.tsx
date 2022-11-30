@@ -6,11 +6,21 @@ import {
   DropDownItem,
 } from './DropDownMenu.style';
 
-const DropDownItems = ({ data, onSelect }) => {
+type ItemsProps = {
+  data: string[];
+  onSelect: (item: string) => void;
+};
+
+type Props = {
+  data: string[];
+  onSelect: (item: string) => void;
+};
+
+const DropDownItems = (props: ItemsProps) => {
   return (
     <DropDownItemContainer>
-      {data.map((item: unknown, index: number) => (
-        <DropDownItem key={index} onClick={() => onSelect(item)}>
+      {props.data.map((item: string, index: number) => (
+        <DropDownItem key={index} onClick={() => props.onSelect(item)}>
           {item}
         </DropDownItem>
       ))}
@@ -18,17 +28,14 @@ const DropDownItems = ({ data, onSelect }) => {
   );
 };
 
-type Props = {
-  data: unknown[];
-  onSelect: (item: string) => void;
-};
-
-const DropDownMenu = forwardRef((props: Props, ref: HTMLElement) => {
-  return (
-    <DropDown ref={ref}>
-      <DropDownItems onSelect={props.onSelect} data={props.data} />
-    </DropDown>
-  );
-});
+const DropDownMenu = forwardRef(
+  (props: Props, ref: React.Ref<HTMLDivElement>) => {
+    return (
+      <DropDown ref={ref}>
+        <DropDownItems onSelect={props.onSelect} data={props.data} />
+      </DropDown>
+    );
+  }
+);
 
 export default DropDownMenu;

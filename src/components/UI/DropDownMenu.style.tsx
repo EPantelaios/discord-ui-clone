@@ -1,7 +1,12 @@
 import styled from 'styled-components';
+
 import colors from '../../config/colors';
 
-const DropDown = styled.div`
+type Props = {
+  ref: React.Ref<HTMLDivElement>;
+};
+
+const DropDown = styled.div<Props>`
   position: absolute;
   transform: translateX(-2rem) translateY(-9.5rem);
   max-height: 320px;
