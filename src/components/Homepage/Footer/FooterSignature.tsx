@@ -1,6 +1,7 @@
+import { Link } from 'react-router-dom';
+
 import HomePageButton from '../../UI/HomePageButton';
 import { NavBarLogoIcon } from '../Layout/NavBarContent/NavBarLogo.style';
-import { Link } from 'react-router-dom';
 import {
   FooterSignatureContainer,
   HeaderSpacer,

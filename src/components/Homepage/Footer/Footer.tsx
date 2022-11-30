@@ -3,9 +3,9 @@ import {
   FooterWrapper,
   FooterContentWrapper,
 } from './Footer.style';
+import FooterInfo from './FooterInfo';
 import FooterMainContent from './FooterMainContent';
 import FooterSignature from './FooterSignature';
-import FooterInfo from './FooterInfo';
 
 function Footer() {
   return (
