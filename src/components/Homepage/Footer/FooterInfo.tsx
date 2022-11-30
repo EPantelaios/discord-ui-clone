@@ -1,3 +1,8 @@
+import { useRef, useState } from 'react';
+
+import { useOnClickOutside } from '../../../hooks/useOnClickOutside';
+import Languages, { defaultLanguage } from '../../../utils/languages';
+import DropDownMenu from '../../UI/DropDownMenu';
 import {
   Container,
   Title,
@@ -17,12 +22,33 @@ import {
 } from './FooterInfo.style';
 
 function FooterSymbols() {
+  const [isDropdownMenuOpen, setIsDropdownMenuOpen] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState(
+    defaultLanguage.name
+  );
+
+  const ref = useRef<HTMLDivElement>(null);
+
+  useOnClickOutside(ref, () => setIsDropdownMenuOpen(false));
+
+  const selectHandler = (item: string) => {
+    setSelectedLanguage(item);
+    setIsDropdownMenuOpen(false);
+  };
+
   return (
     <Container>
       <Title>IMAGINE A PLACE</Title>
-      <LanguageWrapper>
+      {isDropdownMenuOpen && (
+        <DropDownMenu
+          data={Languages.map((language) => language.name)}
+          onSelect={selectHandler}
+          ref={ref}
+        />
+      )}
+      <LanguageWrapper onClick={() => setIsDropdownMenuOpen(true)}>
         <LanguageIcon />
-        <LanguageText>English, USA</LanguageText>
+        <LanguageText>{selectedLanguage}</LanguageText>
         <LanguageArrow />
       </LanguageWrapper>
       <SocialMediaIcons>
