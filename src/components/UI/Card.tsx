@@ -1,11 +1,11 @@
-import classes from './Card.module.css';
+import { CardContainer } from './Card.style';
 
 type Props = {
   children: React.ReactNode;
 };
 
 const Card = (props: Props) => {
-  return <div className={classes.card}>{props.children}</div>;
+  return <CardContainer>{props.children}</CardContainer>;
 };
 
 export default Card;
