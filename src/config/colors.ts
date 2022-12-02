@@ -2,6 +2,7 @@ const colors = {
   blue: '#404EED',
   blurple: '#5865F2',
   lightblue: '#0099CC',
+  deeplightblue: '#00aff4',
   lightpurple: '#7983f5',
   greyple: '#99AAB5',
   white: '#FFFFFF',
