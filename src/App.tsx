@@ -1,25 +1,16 @@
 import { Routes, Route } from 'react-router-dom';
 
-import Footer from './components/Homepage/Footer/Footer';
-import Header from './components/Homepage/Layout/Header/Header';
-import MainContent from './components/Homepage/MainContent/MainContent';
+import HomePage from './pages/HomePage';
+import LoginPage from './pages/LoginPage';
+// import RegisterPage from './pages/RegisterPage';
 
 function App() {
   return (
     <>
       <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Header />
-              <MainContent />
-              <Footer />
-            </>
-          }
-        />
+        <Route path="/" element={<HomePage />} />
 
-        {/* <Route path="/login" element={<LoginPage />} /> */}
+        <Route path="/login" element={<LoginPage />} />
         {/* <Route path="/register" element={<RegisterPage />} /> */}
       </Routes>
     </>
