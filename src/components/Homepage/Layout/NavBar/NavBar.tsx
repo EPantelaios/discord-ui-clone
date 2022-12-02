@@ -26,7 +26,6 @@ function NavBar() {
   });
 
   const isBigScreen = useMemo(() => {
-    console.log('width', width);
     if (width && width >= deviceSize.desktop) {
       setIsMenuOpen(false);
       return true;
