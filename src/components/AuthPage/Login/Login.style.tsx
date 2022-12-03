@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-import LogoIconImage from '../../assets/discord_logo_qrcode.png';
-import QRCodeImage from '../../assets/qr_code.png';
-import colors from '../../config/colors';
-import { device } from '../../config/device';
+import LogoIconImage from '../../../assets/discord_logo_qrcode.png';
+import QRCodeImage from '../../../assets/qr_code.png';
+import colors from '../../../config/colors';
+import { device } from '../../../config/device';
 
 export const LoginWrapper = styled.div`
   width: 100%;
@@ -39,7 +39,7 @@ export const CardContent = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 7rem;
+    gap: 6rem;
   }
 `;
 
@@ -123,7 +123,7 @@ export const Label = styled.label`
   -webkit-touch-callout: none;
   pointer-events: none;
 
-  &::after {
+  &:after {
     content: '*';
     font-size: 110%;
     color: ${colors.red};
@@ -198,18 +198,6 @@ export const RegisterText = styled.p`
       cursor: pointer;
       text-decoration: underline;
     }
-  }
-`;
-
-export const RegisterLink = styled.a.attrs(() => ({
-  href: 'register',
-}))`
-  margin-left: 0.2rem;
-  color: ${colors.deeplightblue};
-
-  :hover {
-    cursor: pointer;
-    text-decoration: underline;
   }
 `;
 
