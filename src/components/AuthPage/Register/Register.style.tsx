@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+import { ReactComponent as BigArrowDown } from '../../../assets/big_arrow_down.svg';
 import colors from '../../../config/colors';
 import { device } from '../../../config/device';
 
@@ -10,7 +11,7 @@ export const CardContent = styled.div`
 
   @media (min-width: 486px) {
     width: 80vw;
-    max-width: 450px;
+    max-width: 420px;
     height: 100%;
   }
 `;
@@ -51,8 +52,29 @@ export const Form = styled.form`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 0.5rem;
+  gap: 0.6rem;
   color: ${colors.grey};
+`;
+
+export const ArrowDownIconWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto 0;
+  background-color: ${colors.darkest};
+  width: 1rem;
+  height: 2rem;
+`;
+
+export const ArrowDownIcon = styled(BigArrowDown)`
+  fill: currentcolor;
+  width: 1.5rem;
+  height: 1.5rem;
+
+  :hover {
+    cursor: pointer;
+    color: ${colors.white};
+  }
 `;
 
 export const Label = styled.label`
@@ -69,26 +91,82 @@ export const Label = styled.label`
   pointer-events: none;
 `;
 
-export const RequiredRedStar = styled.span`
-  color: ${colors.red};
+export const DateWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  width: 100%;
 `;
 
-export const ForgotPassword = styled.button`
-  all: unset;
-  font-size: 0.9rem;
-  color: ${colors.deeplightblue};
-  user-select: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -webkit-user-drag: none;
-  -webkit-touch-callout: none;
+export const InputWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: ${colors.darkest};
+  border-radius: 0.25rem;
+`;
+
+export const InputDate = styled.input.attrs((props) => ({
+  placeholder: props.placeholder || '',
+}))`
+  width: 100%;
+  background-color: ${colors.darkest};
+  color: ${colors.grey};
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 0.25rem;
+  pointer-events: none;
+`;
+
+export const TermsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  margin-top: 1rem;
+`;
+
+export const Term = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
 
   :hover {
     cursor: pointer;
-    text-decoration: underline;
   }
+
+  a {
+    color: ${colors.lightblue};
+
+    :hover {
+      text-decoration: underline;
+    }
+  }
+`;
+
+export const CheckBoxContainer = styled.label`
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 0;
+`;
+
+export const TermTextMain = styled.p`
+  font-size: 0.8rem;
+  color: ${colors.white};
+`;
+
+export const TermTextOptional = styled.p`
+  font-size: 0.8rem;
+  color: ${colors.grey};
 `;
 
 export const RegisterButton = styled.button`
