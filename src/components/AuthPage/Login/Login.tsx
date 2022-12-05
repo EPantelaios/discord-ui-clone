@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { deviceSize } from '../../../config/device';
 import NavBarLogo from '../../Homepage/Layout/NavBarContent/NavBarLogo';
 import InputLayout from '../../UI/InputLayout';
+import Card from '../../UI/Card';
 import {
   CardContent,
   LeftSideCard,
@@ -28,10 +29,10 @@ type Props = {
 };
 
 function Login(props: Props) {
-  const { width } = props;
+  const { width } = props || 0;
 
   const isScreenSmall = useMemo(() => {
-    if (width && width < 486) {
+    if (width && width < deviceSize.datePageTablet) {
       return true;
     }
     return false;
@@ -45,44 +46,46 @@ function Login(props: Props) {
   }, [width]);
 
   return (
-    <CardContent>
-      <LeftSideCard>
-        {isScreenSmall && (
-          <LogoIconWrapper>
-            <NavBarLogo />
-          </LogoIconWrapper>
-        )}
-        <TitleWrapper>
-          <Title>{'Welcome back!'}</Title>
-          <Subtitle>{"We're so excited to see you again!"}</Subtitle>
-        </TitleWrapper>
-        <Form>
-          <Label>EMAIL OR PHONE NUMBER</Label>
-          <InputLayout />
-          <Label>PASSWORD</Label>
-          <InputLayout type="password" />
-          <ForgotPassword>Forgot your password?</ForgotPassword>
-          <LoginButton>Log In</LoginButton>
-          <RegisterText>
-            Need an account? <Link to="/register">Register</Link>
-          </RegisterText>
-        </Form>
-      </LeftSideCard>
-      {isBigScreen && (
-        <RightSideCard>
-          <QRCodeWrapper>
-            <QRCode />
-            <LogoIcon />
-          </QRCodeWrapper>
+    <Card>
+      <CardContent>
+        <LeftSideCard>
+          {isScreenSmall && (
+            <LogoIconWrapper>
+              <NavBarLogo />
+            </LogoIconWrapper>
+          )}
           <TitleWrapper>
-            <Title>{'Log in with QR Code'}</Title>
-            <Subtitle>
-              {'Scan this with the Discord mobile app to log in instantly.'}
-            </Subtitle>
+            <Title>{'Welcome back!'}</Title>
+            <Subtitle>{"We're so excited to see you again!"}</Subtitle>
           </TitleWrapper>
-        </RightSideCard>
-      )}
-    </CardContent>
+          <Form onSubmit={(e) => e.preventDefault()}>
+            <Label>EMAIL OR PHONE NUMBER</Label>
+            <InputLayout />
+            <Label>PASSWORD</Label>
+            <InputLayout type="password" />
+            <ForgotPassword>Forgot your password?</ForgotPassword>
+            <LoginButton>Log In</LoginButton>
+            <RegisterText>
+              Need an account? <Link to="/register">Register</Link>
+            </RegisterText>
+          </Form>
+        </LeftSideCard>
+        {isBigScreen && (
+          <RightSideCard>
+            <QRCodeWrapper>
+              <QRCode />
+              <LogoIcon />
+            </QRCodeWrapper>
+            <TitleWrapper>
+              <Title>{'Log in with QR Code'}</Title>
+              <Subtitle>
+                {'Scan this with the Discord mobile app to log in instantly.'}
+              </Subtitle>
+            </TitleWrapper>
+          </RightSideCard>
+        )}
+      </CardContent>
+    </Card>
   );
 }
 

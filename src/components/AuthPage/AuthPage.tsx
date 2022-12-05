@@ -23,11 +23,9 @@ function AuthPage(props: Props) {
       <Container ref={ref}>
         <AuthFormBackgroundImage />
         <CardContainer>
-          <Card>
-            {!props.login && !props.register && <Login width={width} />}
-            {props.login && <Login width={width} />}
-            {props.register && <Register width={width} />}
-          </Card>
+          {!props.login && !props.register && <Login width={width} />}
+          {props.login && <Login width={width} />}
+          {props.register && <Register width={width} />}
         </CardContainer>
       </Container>
     </>
