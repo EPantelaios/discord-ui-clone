@@ -1,4 +1,5 @@
 const size = {
+  datePageTablet: '486px',
   tablet: '768px',
   desktop: '1024px',
 
@@ -7,6 +8,7 @@ const size = {
 };
 
 const deviceSize = {
+  datePageTablet: 486,
   tablet: 768,
   desktop: 1024,
 
@@ -15,6 +17,7 @@ const deviceSize = {
 };
 
 const device = {
+  datePageTablet: `(min-width: ${size.datePageTablet})`,
   tablet: `(min-width: ${size.tablet})`,
   desktop: `(min-width: ${size.desktop})`,
 

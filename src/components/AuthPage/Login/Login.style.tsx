@@ -27,7 +27,7 @@ export const CardContent = styled.div`
   height: 100vh;
   padding: 1rem;
 
-  @media (min-width: 486px) {
+  @media ${device.datePageTablet} {
     width: 80vw;
     max-width: 450px;
     height: 100%;
