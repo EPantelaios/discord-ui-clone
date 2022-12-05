@@ -9,7 +9,7 @@ type Props = {
 
 const DropDown = styled.div<Props>`
   position: absolute;
-  transform: translateY(-11rem);
+  bottom: 28.5rem;
   max-height: 320px;
   min-width: 120px;
   z-index: 10;
@@ -17,7 +17,6 @@ const DropDown = styled.div<Props>`
   overflow-y: auto;
   background-color: ${colors.darkestgrey};
   border: 1px solid ${colors.darkest};
-  scrollbar-width: thin;
 
   :hover {
     cursor: pointer;

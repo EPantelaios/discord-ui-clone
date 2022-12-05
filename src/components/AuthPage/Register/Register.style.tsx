@@ -9,7 +9,7 @@ export const CardContent = styled.div`
   height: 100vh;
   padding: 1rem;
 
-  @media (min-width: 486px) {
+  @media ${device.datePageTablet} {
     width: 80vw;
     max-width: 420px;
     height: 100%;
@@ -70,6 +70,7 @@ export const ArrowDownIcon = styled(BigArrowDown)`
   fill: currentcolor;
   width: 1.5rem;
   height: 1.5rem;
+  margin-right: 0.5rem;
 
   :hover {
     cursor: pointer;
@@ -104,9 +105,9 @@ export const InputWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem;
   background-color: ${colors.darkest};
   border-radius: 0.25rem;
+  height: 2.5rem;
 `;
 
 export const InputDate = styled.input.attrs((props) => ({
@@ -120,6 +121,7 @@ export const InputDate = styled.input.attrs((props) => ({
   outline: none;
   border-radius: 0.25rem;
   pointer-events: none;
+  padding: 0.5rem;
 `;
 
 export const TermsWrapper = styled.div`
@@ -169,7 +171,9 @@ export const TermTextOptional = styled.p`
   color: ${colors.grey};
 `;
 
-export const RegisterButton = styled.button`
+export const RegisterButton = styled.button.attrs((props) => ({
+  disabled: props.disabled || false,
+}))`
   margin-top: 1rem;
   width: 100%;
   padding: 0.8rem 1rem;
@@ -180,10 +184,11 @@ export const RegisterButton = styled.button`
   font-size: 1rem;
   background-color: ${colors.blurple};
   color: ${colors.white};
+  opacity: ${(props) => (!props.disabled ? '1' : '0.5')};
 
   :hover {
-    cursor: pointer;
-    background-color: ${colors.blue};
+    cursor: ${(props) => (!props.disabled ? 'pointer' : 'not-allowed')};
+    background-color: ${(props) => !props.disabled && colors.blue};
   }
 `;
 

@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 import { deviceSize } from '../../../config/device';
 import NavBarLogo from '../../Homepage/Layout/NavBarContent/NavBarLogo';
-import InputLayout from '../../UI/InputLayout';
 import Card from '../../UI/Card';
+import InputLayout from '../../UI/InputLayout';
 import {
   CardContent,
   LeftSideCard,
