@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { ReactComponent as CloseIcon } from '../../../../assets/close_icon.svg';
 import { ReactComponent as DownloadIcon } from '../../../../assets/download_button_icon.svg';
 import colors from '../../../../config/colors';
+import HomePageButton from '../../../UI/HomePageButton';
 import NavBarLogo from '../NavBarContent/NavBarLogo';
 
 type Props = {
@@ -12,6 +13,9 @@ type Props = {
 export const ContainerWrapper = styled.div`
   height: 90vh;
   padding: 1.5rem 3rem 7.5rem 1.5rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
   > a {
     display: inline-block;
     padding: 0.5rem;
@@ -26,7 +30,7 @@ export const HamburgerMenuLogo = styled(NavBarLogo)`
 export const CloseButtonIcon = styled(CloseIcon)`
   position: absolute;
   top: 1.7rem;
-  right: 1rem;
+  right: 1.5rem;
   z-index: 10000;
   width: 2.3rem;
   height: 2.3rem;
@@ -87,14 +91,14 @@ export const HamburgerMenuItem = styled.span<Props>`
 
 export const Footer = styled.footer`
   position: absolute;
+  bottom: 0rem;
   padding: 1.5rem;
-  margin-bottom: 3rem;
+  overflow: hidden;
 `;
 
 export const DownloadButtonIcon = styled(DownloadIcon)``;
 
-export const DownloadButton = styled.span`
-  all: inherit;
+export const DownloadButton = styled(HomePageButton)`
   background-color: ${colors.blurple};
   color: ${colors.white};
   padding: 0.5rem 1rem;
