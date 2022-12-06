@@ -3,7 +3,6 @@ import { memo } from 'react';
 import useResizeObserver from 'use-resize-observer';
 
 import AuthFormBackgroundImage from '../UI/AuthFormBackgroundImage';
-import Card from '../UI/Card';
 import { Container, CardContainer } from './AuthPage.style';
 import Login from './Login/Login';
 import Register from './Register/Register';

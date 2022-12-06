@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
-import colors from '../../../../config/colors';
-import { size, device, deviceSize } from '../../../../config/device';
+import { size, device } from '../../../../config/device';
 
 export const NavBarContainer = styled.nav`
   width: 100%;

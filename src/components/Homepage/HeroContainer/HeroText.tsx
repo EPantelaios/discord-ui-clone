@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { HeroTextWrapper, HeroTitle, HeroParagraph } from './HeroText.style';
 
 function HeroText() {
