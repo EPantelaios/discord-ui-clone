@@ -7,31 +7,43 @@ type Props = {
   backgroundColorItem?: string;
 };
 
-const DropDown = styled.div<Props>`
+export const DropDown = styled.div<Props>`
   position: absolute;
   bottom: 28.5rem;
-  max-height: 320px;
+  max-height: 220px;
   min-width: 120px;
-  z-index: 10;
+  z-index: 1000;
   overflow-x: hidden;
   overflow-y: auto;
-  background-color: ${colors.darkestgrey};
+  background-color: ${colors.dark};
+  border-radius: 2px;
   border: 1px solid ${colors.darkest};
+
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-clip: padding-box;
+    background: ${colors.darkest};
+    border-radius: 2px;
+    border-right: 2px solid ${colors.dark};
+  }
+`;
+
+export const DropDownItemContainer = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  width: 98%;
 
   :hover {
     cursor: pointer;
   }
 `;
 
-const DropDownItemContainer = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-`;
-
-const DropDownItem = styled.div<Props>`
-  width: 100%;
+export const DropDownItem = styled.div<Props>`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -40,7 +52,7 @@ const DropDownItem = styled.div<Props>`
   font-size: 1rem;
 
   :hover {
-    background-color: ${colors.dark};
+    background-color: ${colors.darkestgrey};
+    color: ${colors.light};
   }
 `;
-export { DropDown, DropDownItemContainer, DropDownItem };
