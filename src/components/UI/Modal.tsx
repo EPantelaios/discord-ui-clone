@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 
 import ReactDOM from 'react-dom';
 
-import classes from './Modal.module.css';
+import { BackdropContainer, ModalContainer } from './Modal.style';
 
 type PropsBackdrop = {
   onClose: () => void;
@@ -20,20 +20,34 @@ type PropsModal = {
 };
 
 const Backdrop = (props: PropsBackdrop) => {
-  return <div className={classes.backdrop} onClick={props.onClose} />;
+  return <BackdropContainer onClick={props.onClose} />;
 };
 
 const ModalOverlay = (props: PropsModalOverlay) => {
-  const classesModal = `${classes.modal} ${
-    props.isClosing ? classes.closingAnimation : ''
-  }`;
-
-  return <div className={classesModal}>{props.children}</div>;
+  return (
+    <ModalContainer isClosing={props.isClosing}>
+      {props.children}
+    </ModalContainer>
+  );
 };
 
 const portalElement = document.getElementById('overlays') as HTMLElement;
 
 const Modal = (props: PropsModal) => {
+  useEffect(() => {
+    // Prevent scrolling to top when modal is open
+    const scrollY = window.scrollY;
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.position = 'fixed';
+
+    return () => {
+      // Restore scrolling to initial position when modal is closed
+      document.body.style.position = '';
+      document.body.style.top = '';
+      window.scrollTo(0, scrollY || 0);
+    };
+  }, []);
+
   return (
     <>
       {ReactDOM.createPortal(
