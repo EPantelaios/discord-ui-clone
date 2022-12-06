@@ -16,7 +16,7 @@ const dates = {
     'November',
     'December',
   ],
-  year: _.range(1870, 2020),
+  year: _.range(2019, 1869, -1),
 };
 
 export default dates;
