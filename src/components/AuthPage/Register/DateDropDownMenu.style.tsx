@@ -10,7 +10,7 @@ type Props = {
 export const DropDown = styled.div<Props>`
   position: absolute;
   bottom: 28.5rem;
-  max-height: 220px;
+  max-height: 200px;
   min-width: 120px;
   z-index: 1000;
   overflow-x: hidden;
