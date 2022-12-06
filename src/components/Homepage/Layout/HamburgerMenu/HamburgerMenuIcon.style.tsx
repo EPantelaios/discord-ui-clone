@@ -9,4 +9,4 @@ export const HamburgerMenuWrapper = styled.div`
   }
 `;
 
-export const HamburgerMenuIcon = styled(hamburgerMenuIcon)``;
+export const HamburgerMenuLogo = styled(hamburgerMenuIcon)``;

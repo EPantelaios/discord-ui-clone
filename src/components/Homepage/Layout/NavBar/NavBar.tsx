@@ -5,7 +5,7 @@ import useResizeObserver from 'use-resize-observer';
 
 import { deviceSize } from '../../../../config/device';
 import Modal from '../../../UI/Modal';
-import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
+import HamburgerMenuIcon from '../HamburgerMenu/HamburgerMenuIcon';
 import HamburgerMenuModalContent from '../HamburgerMenu/HamburgerMenuModalContent';
 import NavBarLoginButton from '../NavBarContent/NavBarLoginButton';
 import NavBarLogo from '../NavBarContent/NavBarLogo';
@@ -66,7 +66,7 @@ function NavBar() {
               <NavBarLoginButton>Login</NavBarLoginButton>
             </Link>
             {!isBigScreen && (
-              <HamburgerMenu onClick={hamburgerMenuOpenHandler} />
+              <HamburgerMenuIcon onClick={hamburgerMenuOpenHandler} />
             )}
           </NavBarRightSide>
         </NavBarWrapper>
