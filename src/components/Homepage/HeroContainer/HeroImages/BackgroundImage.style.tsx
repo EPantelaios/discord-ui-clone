@@ -12,11 +12,12 @@ export const BackgroundImageIcon = styled.img`
   @media ${device.tablet} {
     display: block;
     position: relative;
-    top: 5.6rem;
+    margin-top: 6rem;
     margin-left: -82.5rem;
   }
 
   @media ${device.desktop} {
+    margin-top: 0;
     top: -3rem;
     margin-left: -80rem;
   }
