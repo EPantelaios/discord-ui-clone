@@ -33,8 +33,6 @@ export const DropDownItemContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
-  overflow-x: hidden;
-  overflow-y: auto;
 `;
 
 export const DropDownItem = styled.div`
