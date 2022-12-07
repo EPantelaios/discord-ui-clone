@@ -90,10 +90,10 @@ export const HamburgerMenuItem = styled.span<Props>`
 `;
 
 export const Footer = styled.footer`
-  height: 120px;
+  height: 10vh;
   position: absolute;
   left: 0rem;
-  bottom: 0rem;
+  bottom: 1rem;
   padding: 1.5rem;
   overflow: hidden;
 `;
