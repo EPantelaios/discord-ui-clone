@@ -5,7 +5,8 @@ export const BackdropContainer = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
   z-index: 9000;
   background-color: rgba(1, 1, 1, 0.2);
 `;
@@ -32,8 +33,9 @@ export const ModalContainer = styled.div<{ isClosing: boolean | undefined }>`
   top: 0;
   right: 0;
   width: 20rem;
-  height: 100vh;
-  z-index: 2000000;
+  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
+  z-index: 10000;
   background-color: #fff;
   border-bottom-left-radius: 8px;
   border-top-left-radius: 8px;
