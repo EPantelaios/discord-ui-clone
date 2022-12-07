@@ -11,8 +11,8 @@ type Props = {
 };
 
 export const ContainerWrapper = styled.div`
-  height: 90vh;
-  height: calc(var(--vh, 1vh) * 90);
+  height: 80vh;
+  height: calc(var(--vh, 1vh) * 80);
   padding: 1.5rem 3rem 7.5rem 1.5rem;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -92,8 +92,7 @@ export const HamburgerMenuItem = styled.span<Props>`
 
 export const Footer = styled.footer`
   position: absolute;
-  left: 0rem;
-  bottom: 1rem;
+  bottom: 0rem;
   padding: 1.5rem;
   overflow: hidden;
 `;
