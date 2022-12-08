@@ -93,14 +93,12 @@ export const HamburgerMenuItem = styled.span<Props>`
 
 export const Footer = styled.footer`
   position: absolute;
-  bottom: 3vh;
-  bottom: calc(var(--vh, 3vh));
+  bottom: 5%;
   padding: 1.5rem;
   overflow: hidden;
 
   @media ${device.datePageTablet} {
-    bottom: 1vh;
-    bottom: calc(var(--vh, 1vh));
+    bottom: 1%;
   }
 `;
 
