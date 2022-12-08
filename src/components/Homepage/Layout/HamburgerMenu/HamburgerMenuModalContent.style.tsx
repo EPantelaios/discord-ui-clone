@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { ReactComponent as CloseIcon } from '../../../../assets/close_icon.svg';
 import { ReactComponent as DownloadIcon } from '../../../../assets/download_button_icon.svg';
 import colors from '../../../../config/colors';
+import { device } from '../../../../config/device';
 import HomePageButton from '../../../UI/HomePageButton';
 import NavBarLogo from '../NavBarContent/NavBarLogo';
 
@@ -92,10 +93,15 @@ export const HamburgerMenuItem = styled.span<Props>`
 
 export const Footer = styled.footer`
   position: absolute;
-  bottom: 1vh;
-  bottom: calc(var(--vh, 1vh));
+  bottom: 3vh;
+  bottom: calc(var(--vh, 3vh));
   padding: 1.5rem;
   overflow: hidden;
+
+  @media ${device.datePageTablet} {
+    bottom: 1vh;
+    bottom: calc(var(--vh, 1vh));
+  }
 `;
 
 export const DownloadButtonIcon = styled(DownloadIcon)``;
