@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import colors from '../../../config/colors';
+import HomePageButton from '../../UI/HomePageButton';
 
 export const HeaderSpacer = styled.div`
   width: 100%;
@@ -19,8 +20,7 @@ export const FooterSignatureContainer = styled.div`
   margin-top: 2rem;
 `;
 
-export const SignUpButton = styled.span`
-  all: inherit;
+export const SignUpButton = styled(HomePageButton)`
   padding: 0.6rem 0.8rem;
   font-size: 14px;
   color: ${colors.white};

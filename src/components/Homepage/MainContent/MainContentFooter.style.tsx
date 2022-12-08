@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { ReactComponent as DownloadIcon } from '../../../assets/download_button_icon.svg';
 import colors from '../../../config/colors';
 import { size, device } from '../../../config/device';
+import HomePageButton from '../../UI/HomePageButton';
 
 type PropsContainer = {
   backgroundColor?: string;
@@ -78,8 +79,7 @@ export const ButtonWrapper = styled.div`
 
 export const DownloadButtonIcon = styled(DownloadIcon)``;
 
-export const DownloadButton = styled.span`
-  all: inherit;
+export const DownloadButton = styled(HomePageButton)`
   padding: 0.9rem 1.8rem;
   font-size: 1.2rem;
   color: ${colors.white};

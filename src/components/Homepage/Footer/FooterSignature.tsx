@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 
-import HomePageButton from '../../UI/HomePageButton';
 import { NavBarLogoIcon } from '../Layout/NavBarContent/NavBarLogo.style';
 import {
   FooterSignatureContainer,
@@ -13,11 +12,11 @@ function FooterSignature() {
     <>
       <HeaderSpacer />
       <FooterSignatureContainer>
-        <NavBarLogoIcon />
+        <Link to="/">
+          <NavBarLogoIcon />
+        </Link>
         <Link to="register">
-          <HomePageButton>
-            <SignUpButton>Sign Up</SignUpButton>
-          </HomePageButton>
+          <SignUpButton>Sign Up</SignUpButton>
         </Link>
       </FooterSignatureContainer>
     </>

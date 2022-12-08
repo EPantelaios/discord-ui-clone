@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 import colors from '../../../config/colors';
 import { device } from '../../../config/device';
+import HomePageButton from '../../UI/HomePageButton';
 
 export const HeroButtonsContainer = styled.div`
   display: flex;
@@ -26,8 +27,7 @@ export const HeroButtonsContainer = styled.div`
   }
 `;
 
-export const HeroButtonDownload = styled.span`
-  all: inherit;
+export const HeroButtonDownload = styled(HomePageButton)`
   padding: 1rem 2rem;
   font-size: 1.2rem;
 
@@ -37,8 +37,7 @@ export const HeroButtonDownload = styled.span`
   }
 `;
 
-export const HeroButtonOpenApp = styled.span`
-  all: inherit;
+export const HeroButtonOpenApp = styled(HomePageButton)`
   padding: 1rem 2rem;
   font-size: 1.2rem;
   color: ${colors.white};

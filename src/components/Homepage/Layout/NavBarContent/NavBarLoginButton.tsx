@@ -1,5 +1,4 @@
-import HomePageButton from '../../../UI/HomePageButton';
-import { NavBarLoginButtonStyled } from './NavBarLoginButton.style';
+import { LoginButton } from './NavBarLoginButton.style';
 
 type Props = {
   children: React.ReactNode;
@@ -8,9 +7,7 @@ type Props = {
 function NavBarLoginButton(props: Props) {
   return (
     <>
-      <HomePageButton>
-        <NavBarLoginButtonStyled>{props.children}</NavBarLoginButtonStyled>
-      </HomePageButton>
+      <LoginButton>{props.children}</LoginButton>
     </>
   );
 }

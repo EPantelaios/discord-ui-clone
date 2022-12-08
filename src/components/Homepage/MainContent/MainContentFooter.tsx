@@ -1,4 +1,3 @@
-import HomePageButton from '../../UI/HomePageButton';
 import { DownloadButtonIcon } from '../Layout/HamburgerMenu/HamburgerMenuModalContent.style';
 import {
   FooterContainer,
@@ -25,12 +24,10 @@ function MainContentFooter(props: Props) {
         </IconWrapper>
         <FooterTitle>{props.title}</FooterTitle>
         <ButtonWrapper>
-          <HomePageButton>
-            <DownloadButton>
-              <DownloadButtonIcon />
-              Download for Windows
-            </DownloadButton>
-          </HomePageButton>
+          <DownloadButton>
+            <DownloadButtonIcon />
+            Download for Windows
+          </DownloadButton>
         </ButtonWrapper>
       </FooterWrapper>
     </FooterContainer>

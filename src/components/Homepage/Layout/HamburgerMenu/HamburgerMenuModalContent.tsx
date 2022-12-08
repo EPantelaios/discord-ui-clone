@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 
 import colors from '../../../../config/colors';
 import { navBarHamburgerMenuContent } from '../../../../utils/navBarText';
-import HomePageButton from '../../../UI/HomePageButton';
 import {
   ContainerWrapper,
   HamburgerMenuLogo,
@@ -39,12 +38,10 @@ const HamburgerMenuContent = (props: Props) => {
         <HamburgerMenuItemsWrapper>{menuItems}</HamburgerMenuItemsWrapper>
       </ContainerWrapper>
       <Footer>
-        <HomePageButton>
-          <DownloadButton>
-            <DownloadButtonIcon />
-            Download
-          </DownloadButton>
-        </HomePageButton>
+        <DownloadButton>
+          <DownloadButtonIcon />
+          Download
+        </DownloadButton>
       </Footer>
     </>
   );

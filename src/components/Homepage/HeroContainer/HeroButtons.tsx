@@ -1,4 +1,3 @@
-import HomePageButton from '../../UI/HomePageButton';
 import { DownloadButtonIcon } from '../Layout/HamburgerMenu/HamburgerMenuModalContent.style';
 import {
   HeroButtonsContainer,
@@ -9,15 +8,11 @@ import {
 function HeroButtons() {
   return (
     <HeroButtonsContainer>
-      <HomePageButton>
-        <HeroButtonDownload>
-          <DownloadButtonIcon />
-          Download for Windows
-        </HeroButtonDownload>
-      </HomePageButton>
-      <HomePageButton>
-        <HeroButtonOpenApp>Open Discord in your browser</HeroButtonOpenApp>
-      </HomePageButton>
+      <HeroButtonDownload>
+        <DownloadButtonIcon />
+        Download for Windows
+      </HeroButtonDownload>
+      <HeroButtonOpenApp>Open Discord in your browser</HeroButtonOpenApp>
     </HeroButtonsContainer>
   );
 }
