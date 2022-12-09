@@ -93,13 +93,10 @@ export const HamburgerMenuItem = styled.span<Props>`
 
 export const Footer = styled.footer`
   position: absolute;
-  bottom: 5%;
+  bottom: 3vh;
+  bottom: calc(var(--vh, 1vh) * 3);
   padding: 1.5rem;
   overflow: hidden;
-
-  @media ${device.datePageTablet} {
-    bottom: 1%;
-  }
 `;
 
 export const DownloadButtonIcon = styled(DownloadIcon)``;
