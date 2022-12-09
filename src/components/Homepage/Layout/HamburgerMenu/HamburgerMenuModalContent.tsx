@@ -19,6 +19,9 @@ type Props = {
 };
 
 const HamburgerMenuContent = (props: Props) => {
+  const vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+
   const menuItems = navBarHamburgerMenuContent.map((item, index) => {
     return (
       <Link key={item} to={item.replace(/\s/g, '').toLowerCase()}>

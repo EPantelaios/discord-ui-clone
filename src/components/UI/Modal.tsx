@@ -34,6 +34,9 @@ const ModalOverlay = (props: PropsModalOverlay) => {
 const portalElement = document.getElementById('overlays') as HTMLElement;
 
 const Modal = (props: PropsModal) => {
+  const vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+
   useEffect(() => {
     // Prevent scrolling to top when modal is open
     const scrollY = window.scrollY;
