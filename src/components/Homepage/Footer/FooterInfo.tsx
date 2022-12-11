@@ -2,7 +2,7 @@ import { useRef, useState } from 'react';
 
 import { useOnClickOutside } from '../../../hooks/useOnClickOutside';
 import Languages, { defaultLanguage } from '../../../utils/languages';
-import DropDownMenu from '../../UI/DropDownMenu';
+import DropDownMenu from '../../UI/DropDownMenu/DropDownMenu';
 import {
   Container,
   Title,

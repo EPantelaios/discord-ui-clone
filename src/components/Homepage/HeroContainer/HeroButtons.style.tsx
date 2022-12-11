@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import colors from '../../../config/colors';
 import { device } from '../../../config/device';
-import HomePageButton from '../../UI/HomePageButton';
+import HomePageButton from '../../UI/HomePageButton/HomePageButton';
 
 export const HeroButtonsContainer = styled.div`
   display: flex;

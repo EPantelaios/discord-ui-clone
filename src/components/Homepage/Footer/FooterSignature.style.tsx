@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import colors from '../../../config/colors';
-import HomePageButton from '../../UI/HomePageButton';
+import HomePageButton from '../../UI/HomePageButton/HomePageButton';
 
 export const HeaderSpacer = styled.div`
   width: 100%;

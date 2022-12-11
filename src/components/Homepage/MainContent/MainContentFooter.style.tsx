@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { ReactComponent as DownloadIcon } from '../../../assets/download_button_icon.svg';
 import colors from '../../../config/colors';
 import { size, device } from '../../../config/device';
-import HomePageButton from '../../UI/HomePageButton';
+import HomePageButton from '../../UI/HomePageButton/HomePageButton';
 
 type PropsContainer = {
   backgroundColor?: string;

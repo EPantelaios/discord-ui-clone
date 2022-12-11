@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import useResizeObserver from 'use-resize-observer';
 
 import { deviceSize } from '../../../../config/device';
-import Modal from '../../../UI/Modal';
+import Modal from '../../../UI/Modal/Modal';
 import HamburgerMenuIcon from '../HamburgerMenu/HamburgerMenuIcon';
 import HamburgerMenuModalContent from '../HamburgerMenu/HamburgerMenuModalContent';
 import NavBarLoginButton from '../NavBarContent/NavBarLoginButton';

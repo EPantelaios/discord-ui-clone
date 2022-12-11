@@ -6,9 +6,9 @@ import { deviceSize } from '../../../config/device';
 import { useOnClickOutside } from '../../../hooks/useOnClickOutside';
 import dates from '../../../utils/dates';
 import NavBarLogo from '../../Homepage/Layout/NavBarContent/NavBarLogo';
-import Card from '../../UI/Card';
-import CheckBox from '../../UI/CheckBox';
-import InputLayout from '../../UI/InputLayout';
+import Card from '../../UI/Card/Card';
+import CheckBox from '../../UI/CheckBox/CheckBox';
+import InputLayout from '../../UI/InputLayout/InputLayout';
 import DateDropDownMenu from './DateDropDownMenu';
 import {
   CardContent,
