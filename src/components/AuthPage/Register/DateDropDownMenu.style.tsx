@@ -1,17 +1,23 @@
 import styled from 'styled-components';
 
 import colors from '../../../config/colors';
+import { device } from '../../../config/device';
 
 type Props = {
   backgroundColor?: string;
   backgroundColorItem?: string;
 };
 
+export const DropDownContainer = styled.div`
+  position: relative;
+`;
+
 export const DropDown = styled.div<Props>`
   position: absolute;
-  bottom: 28.5rem;
+  bottom: 1.2rem;
   max-height: 200px;
-  min-width: 120px;
+  width: 100px;
+  max-width: 27vw;
   z-index: 1000;
   overflow-x: hidden;
   overflow-y: auto;
@@ -28,6 +34,10 @@ export const DropDown = styled.div<Props>`
     background: ${colors.darkest};
     border-radius: 2px;
     border-right: 2px solid ${colors.dark};
+  }
+
+  @media ${device.datePageTablet} {
+    width: 120px;
   }
 `;
 
