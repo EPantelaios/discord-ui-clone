@@ -1,6 +1,7 @@
 import { forwardRef } from 'react';
 
 import {
+  DropDownContainer,
   DropDown,
   DropDownItemContainer,
   DropDownItem,
@@ -31,9 +32,11 @@ const DropDownItems = (props: ItemsProps) => {
 const DateDropDownMenu = forwardRef(
   (props: Props, ref: React.Ref<HTMLDivElement>) => {
     return (
-      <DropDown ref={ref}>
-        <DropDownItems onSelect={props.onSelect} data={props.data} />
-      </DropDown>
+      <DropDownContainer>
+        <DropDown ref={ref}>
+          <DropDownItems onSelect={props.onSelect} data={props.data} />
+        </DropDown>
+      </DropDownContainer>
     );
   }
 );
