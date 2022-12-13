@@ -59,10 +59,14 @@ function Login(props: Props) {
             <Subtitle>{"We're so excited to see you again!"}</Subtitle>
           </TitleWrapper>
           <Form onSubmit={(e) => e.preventDefault()}>
-            <Label>EMAIL OR PHONE NUMBER</Label>
-            <InputLayout />
-            <Label>PASSWORD</Label>
-            <InputLayout type="password" />
+            <Label htmlFor="email">EMAIL OR PHONE NUMBER</Label>
+            <InputLayout id="email" />
+            <Label htmlFor="password">PASSWORD</Label>
+            <InputLayout
+              id="passoword"
+              type="password"
+              autoComplete="current-password"
+            />
             <ForgotPassword>Forgot your password?</ForgotPassword>
             <LoginButton>Log In</LoginButton>
             <RegisterText>

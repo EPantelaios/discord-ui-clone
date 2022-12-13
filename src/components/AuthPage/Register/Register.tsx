@@ -82,15 +82,19 @@ function Register(props: Props) {
           <Title>{'Create an account'}</Title>
         </TitleWrapper>
         <Form onSubmit={(e) => e.preventDefault()}>
-          <Label>EMAIL</Label>
-          <InputLayout type="email" />
-          <Label>USERNAME</Label>
-          <InputLayout type="text" />
-          <Label>PASSWORD</Label>
-          <InputLayout type="password" />
-          <Label>DATE OF BIRTH</Label>
+          <Label htmlFor="email">EMAIL</Label>
+          <InputLayout id="email" type="email" />
+          <Label htmlFor="username">USERNAME</Label>
+          <InputLayout id="username" type="text" autoComplete="username" />
+          <Label htmlFor="password">PASSWORD</Label>
+          <InputLayout
+            id="password"
+            type="password"
+            autoComplete="new-password"
+          />
+          <Label htmlFor="birthDate">DATE OF BIRTH</Label>
 
-          <DateWrapper>
+          <DateWrapper id="birthDate">
             <InputWrapper
               ref={refMonth}
               onClick={() => setIsMonthDropdownMenuOpen((prev) => !prev)}

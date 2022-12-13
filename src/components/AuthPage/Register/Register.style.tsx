@@ -78,7 +78,9 @@ export const ArrowDownIcon = styled(BigArrowDown)`
   }
 `;
 
-export const Label = styled.label`
+export const Label = styled.label.attrs((props) => ({
+  htmlFor: props.htmlFor,
+}))`
   margin-top: 0.5rem;
   font-size: 0.8rem;
   font-weight: bold;
@@ -92,7 +94,9 @@ export const Label = styled.label`
   pointer-events: none;
 `;
 
-export const DateWrapper = styled.div`
+export const DateWrapper = styled.div.attrs((props) => ({
+  id: props?.id,
+}))`
   display: flex;
   justify-content: space-between;
   align-items: center;
