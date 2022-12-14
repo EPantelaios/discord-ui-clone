@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 
 import AuthPage from './components/AuthPage/AuthPage';
+import GlobalStyle from './GlobalStyle';
 import HomePage from './pages/HomePage';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/login" element={<AuthPage login />} />
         <Route path="/register" element={<AuthPage register />} />
       </Routes>
+      <GlobalStyle />
     </>
   );
 }
