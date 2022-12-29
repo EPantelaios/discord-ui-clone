@@ -24,6 +24,7 @@ export const DropDown = styled.div<Props>`
   background-color: ${colors.dark};
   border-radius: 2px;
   border: 1px solid ${colors.darkest};
+  overscroll-behavior: contain;
 
   ::-webkit-scrollbar {
     width: 7px;

@@ -4,7 +4,7 @@ import colors from '../../../config/colors';
 
 export const DropDown = styled.div`
   position: absolute;
-  transform: translateY(-9.5rem);
+  bottom: 4.8rem;
   max-height: 320px;
   min-width: 150px;
   z-index: 1000;
@@ -12,6 +12,7 @@ export const DropDown = styled.div`
   overflow-y: auto;
   border-radius: 8px;
   background-color: ${colors.white};
+  overscroll-behavior: contain;
 
   ::-webkit-scrollbar {
     width: 8px;

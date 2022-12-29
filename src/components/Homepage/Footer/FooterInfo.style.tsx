@@ -10,6 +10,7 @@ import colors from '../../../config/colors';
 import { device } from '../../../config/device';
 
 export const Container = styled.div`
+  position: sticky;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
