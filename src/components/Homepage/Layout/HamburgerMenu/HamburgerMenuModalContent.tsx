@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { Link } from 'react-router-dom';
 
 import colors from '../../../../config/colors';
@@ -22,13 +24,15 @@ const HamburgerMenuContent = (props: Props) => {
   const vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-  const menuItems = navBarHamburgerMenuContent.map((item, index) => {
-    return (
-      <Link key={item} to={item.replace(/\s/g, '').toLowerCase()}>
-        <HamburgerMenuItem isSelected={index === 0}>{item}</HamburgerMenuItem>
-      </Link>
-    );
-  });
+  const menuItems = React.Children.toArray(
+    navBarHamburgerMenuContent.map((item, index) => {
+      return (
+        <Link to={item.replace(/\s/g, '').toLowerCase()}>
+          <HamburgerMenuItem isSelected={index === 0}>{item}</HamburgerMenuItem>
+        </Link>
+      );
+    })
+  );
 
   return (
     <>

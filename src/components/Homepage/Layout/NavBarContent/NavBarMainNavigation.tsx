@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { Link } from 'react-router-dom';
 
 import { navBarContent } from '../../../../utils/navBarText';
@@ -7,13 +9,15 @@ import {
 } from './NavBarMainNavigation.style';
 
 function NavBarMainNavigation() {
-  const mainNavigationMenuItems = navBarContent.map((item) => {
-    return (
-      <Link key={item} to={item.toLowerCase()}>
-        <MainNavigationMenuItem>{item}</MainNavigationMenuItem>
-      </Link>
-    );
-  });
+  const mainNavigationMenuItems = React.Children.toArray(
+    navBarContent.map((item) => {
+      return (
+        <Link to={item.toLowerCase()}>
+          <MainNavigationMenuItem>{item}</MainNavigationMenuItem>
+        </Link>
+      );
+    })
+  );
 
   return (
     <MainNavigationMenuWrapper>

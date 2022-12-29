@@ -1,4 +1,4 @@
-import { forwardRef } from 'react';
+import React, { forwardRef } from 'react';
 
 import {
   DropDownContainer,
@@ -20,11 +20,13 @@ type Props = {
 const DropDownItems = (props: ItemsProps) => {
   return (
     <DropDownItemContainer>
-      {props.data.map((item: string | number, index: number) => (
-        <DropDownItem key={index} onClick={() => props.onSelect(item)}>
-          {item}
-        </DropDownItem>
-      ))}
+      {React.Children.toArray(
+        props.data.map((item: string | number) => (
+          <DropDownItem onClick={() => props.onSelect(item)}>
+            {item}
+          </DropDownItem>
+        ))
+      )}
     </DropDownItemContainer>
   );
 };

@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import React, { memo } from 'react';
 
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 
@@ -27,10 +27,10 @@ type ItemFooterProps = {
 };
 
 function MainContent() {
-  const mainContentItems = MainContentItemsText.map(
-    (item: ItemProps, index) => {
+  const mainContentItems = React.Children.toArray(
+    MainContentItemsText.map((item: ItemProps, index) => {
       return (
-        <div key={index}>
+        <div>
           <AnimationOnScroll
             animateIn="animate__slideInUp"
             duration={0.8}
@@ -49,13 +49,13 @@ function MainContent() {
           </AnimationOnScroll>
         </div>
       );
-    }
+    })
   );
 
-  const mainContentLastItem = MainContentLastItemText.map(
-    (item: ItemProps, index) => {
+  const mainContentLastItem = React.Children.toArray(
+    MainContentLastItemText.map((item: ItemProps) => {
       return (
-        <div key={index}>
+        <div>
           <AnimationOnScroll
             animateIn="animate__slideInUp"
             duration={0.8}
@@ -73,20 +73,19 @@ function MainContent() {
           </AnimationOnScroll>
         </div>
       );
-    }
+    })
   );
 
-  const mainContentFooter = MainContentFooterText.map(
-    (item: ItemFooterProps, index) => {
+  const mainContentFooter = React.Children.toArray(
+    MainContentFooterText.map((item: ItemFooterProps) => {
       return (
         <MainContentFooter
-          key={index}
           backgroundColor={item.backgroundColor}
           src={item.src}
           title={item.title}
         />
       );
-    }
+    })
   );
 
   return (
