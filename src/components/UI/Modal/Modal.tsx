@@ -37,12 +37,25 @@ const Modal = (props: PropsModal) => {
   const vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 
+  const keydownHandler = ({ key }: KeyboardEvent) => {
+    switch (key) {
+      case 'Escape':
+        props.onClose();
+        break;
+      default:
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('keydown', keydownHandler);
+    return () => document.removeEventListener('keydown', keydownHandler);
+  }, []);
+
   useEffect(() => {
     // Prevent scrolling to top when modal is open
     const scrollY = window.scrollY;
     document.body.style.top = `-${scrollY}px`;
     document.body.style.position = 'fixed';
-
     return () => {
       // Restore scrolling to initial position when modal is closed
       document.body.style.position = '';
