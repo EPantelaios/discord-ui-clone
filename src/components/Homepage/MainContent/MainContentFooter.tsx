@@ -1,4 +1,3 @@
-import { DownloadButtonIcon } from '../Layout/HamburgerMenu/HamburgerMenuModalContent.style';
 import {
   FooterContainer,
   FooterWrapper,
@@ -8,6 +7,7 @@ import {
   ButtonWrapper,
   DownloadButton,
 } from './MainContentFooter.style';
+import { DownloadButtonIcon } from '../Layout/HamburgerMenu/HamburgerMenuModalContent.style';
 
 type Props = {
   backgroundColor?: string;

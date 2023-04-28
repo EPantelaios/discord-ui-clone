@@ -2,15 +2,15 @@ import React, { memo } from 'react';
 
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 
+import { MainContentWrapper } from './MainContent.style';
+import MainContentFooter from './MainContentFooter';
+import MainContentItem from './MainContentItem';
+import MainContentItemFooter from './MainContentLastItem';
 import {
   MainContentItemsText,
   MainContentLastItemText,
   MainContentFooterText,
 } from '../../../utils/mainContentItemsText';
-import { MainContentWrapper } from './MainContent.style';
-import MainContentFooter from './MainContentFooter';
-import MainContentItem from './MainContentItem';
-import MainContentItemFooter from './MainContentLastItem';
 import 'animate.css/animate.min.css';
 
 type ItemProps = {

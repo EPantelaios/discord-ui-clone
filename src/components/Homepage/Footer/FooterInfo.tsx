@@ -1,8 +1,5 @@
 import { useRef, useState } from 'react';
 
-import { useOnClickOutside } from '../../../hooks/useOnClickOutside';
-import Languages, { defaultLanguage } from '../../../utils/languages';
-import DropDownMenu from '../../UI/DropDownMenu/DropDownMenu';
 import {
   Container,
   Title,
@@ -20,6 +17,9 @@ import {
   YoutubeLink,
   YoutubeIcon,
 } from './FooterInfo.style';
+import { useOnClickOutside } from '../../../hooks/useOnClickOutside';
+import Languages, { defaultLanguage } from '../../../utils/languages';
+import DropDownMenu from '../../UI/DropDownMenu/DropDownMenu';
 
 function FooterSymbols() {
   const [isDropdownMenuOpen, setIsDropdownMenuOpen] = useState(false);

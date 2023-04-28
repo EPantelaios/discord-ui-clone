@@ -2,8 +2,6 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-import colors from '../../../../config/colors';
-import { navBarHamburgerMenuContent } from '../../../../utils/navBarText';
 import {
   ContainerWrapper,
   HamburgerMenuLogo,
@@ -15,6 +13,8 @@ import {
   DownloadButtonIcon,
   DownloadButton,
 } from './HamburgerMenuModalContent.style';
+import colors from '../../../../config/colors';
+import { navBarHamburgerMenuContent } from '../../../../utils/navBarText';
 
 type Props = {
   onClick: () => void;

@@ -1,9 +1,9 @@
-import { DownloadButtonIcon } from '../Layout/HamburgerMenu/HamburgerMenuModalContent.style';
 import {
   HeroButtonsContainer,
   HeroButtonDownload,
   HeroButtonOpenApp,
 } from './HeroButtons.style';
+import { DownloadButtonIcon } from '../Layout/HamburgerMenu/HamburgerMenuModalContent.style';
 
 function HeroButtons() {
   return (

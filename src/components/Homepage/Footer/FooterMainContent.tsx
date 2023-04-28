@@ -2,13 +2,13 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-import FooterText from '../../../utils/footerText';
 import {
   FooterMainContentContainer,
   FooterColumn,
   FooterColumnTitle,
   FooterColumnItem,
 } from './FooterMainContent.style';
+import FooterText from '../../../utils/footerText';
 
 function FooterMainContent() {
   const columnsContent = React.Children.toArray(

@@ -1,6 +1,6 @@
+import { HeaderContainer } from './Header.style';
 import HeroContainer from '../../HeroContainer/HeroContainer';
 import NavBar from '../NavBar/NavBar';
-import { HeaderContainer } from './Header.style';
 
 function Header() {
   return (

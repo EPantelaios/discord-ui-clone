@@ -2,10 +2,6 @@ import { useMemo } from 'react';
 
 import { Link } from 'react-router-dom';
 
-import { deviceSize } from '../../../config/device';
-import NavBarLogo from '../../Homepage/Layout/NavBarContent/NavBarLogo';
-import Card from '../../UI/Card/Card';
-import InputLayout from '../../UI/InputLayout/InputLayout';
 import {
   CardContent,
   LeftSideCard,
@@ -23,6 +19,10 @@ import {
   QRCode,
   LogoIcon,
 } from './Login.style';
+import { deviceSize } from '../../../config/device';
+import NavBarLogo from '../../Homepage/Layout/NavBarContent/NavBarLogo';
+import Card from '../../UI/Card/Card';
+import InputLayout from '../../UI/InputLayout/InputLayout';
 
 type Props = {
   width?: number;

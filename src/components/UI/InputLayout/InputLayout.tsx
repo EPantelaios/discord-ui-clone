@@ -6,6 +6,7 @@ type Props = {
   placeholder?: string;
   autoComplete?: string;
 };
+
 function InputLayout(props: Props) {
   return (
     <InputContainer

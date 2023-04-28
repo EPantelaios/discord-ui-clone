@@ -2,11 +2,11 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-import { navBarContent } from '../../../../utils/navBarText';
 import {
   MainNavigationMenuWrapper,
   MainNavigationMenuItem,
 } from './NavBarMainNavigation.style';
+import { navBarContent } from '../../../../utils/navBarText';
 
 function NavBarMainNavigation() {
   const mainNavigationMenuItems = React.Children.toArray(

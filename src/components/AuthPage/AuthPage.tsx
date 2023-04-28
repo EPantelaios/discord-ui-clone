@@ -2,10 +2,10 @@ import { memo } from 'react';
 
 import useResizeObserver from 'use-resize-observer';
 
-import AuthFormBackgroundImage from '../UI/AuthFormBackgroundImage/AuthFormBackgroundImage';
 import { Container, CardContainer } from './AuthPage.style';
 import Login from './Login/Login';
 import Register from './Register/Register';
+import AuthFormBackgroundImage from '../UI/AuthFormBackgroundImage/AuthFormBackgroundImage';
 
 type Props = {
   login?: boolean;
